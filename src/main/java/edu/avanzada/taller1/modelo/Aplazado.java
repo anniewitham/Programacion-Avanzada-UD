@@ -1,4 +1,4 @@
-package Modelo;
+package edu.avanzada.taller1.modelo;
 
 import java.util.Date;
 

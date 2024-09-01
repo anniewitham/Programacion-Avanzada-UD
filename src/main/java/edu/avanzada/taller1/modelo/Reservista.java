@@ -1,4 +1,4 @@
-package Modelo;
+package edu.avanzada.taller1.modelo;
 
 public class Reservista extends Persona {
 
