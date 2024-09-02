@@ -11,14 +11,14 @@ import java.awt.event.ActionListener;
  *
  * @author Personal
  */
-public class InsertarPersona extends javax.swing.JFrame {
+public class ElegirSituacionReporte extends javax.swing.JFrame {
 
     private ControlPrincipal control;
 
     /**
      * Creates new form InsertarPersona
      */
-    public InsertarPersona(ControlPrincipal aThis) {
+    public ElegirSituacionReporte(ControlPrincipal aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.control = control;
@@ -29,51 +29,50 @@ public class InsertarPersona extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        botonInsertarRemiso = new javax.swing.JButton();
-        botonInsertarReclutado = new javax.swing.JButton();
-        botonInsertarAplazado = new javax.swing.JButton();
-        botonInsertarReservista = new javax.swing.JButton();
+        botonReporteRemiso = new javax.swing.JButton();
+        botonReporteReclutados = new javax.swing.JButton();
+        botonReporteAplazado = new javax.swing.JButton();
+        botonReporteReservista = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(381, 222));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 245, 183));
 
-        botonInsertarRemiso.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        botonInsertarRemiso.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarRemiso.setText("Remiso");
-        botonInsertarRemiso.setBorder(null);
+        botonReporteRemiso.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        botonReporteRemiso.setForeground(new java.awt.Color(102, 102, 102));
+        botonReporteRemiso.setText("Remisos");
+        botonReporteRemiso.setBorder(null);
 
-        botonInsertarReclutado.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        botonInsertarReclutado.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarReclutado.setText("Reclutado");
-        botonInsertarReclutado.setBorder(null);
-        botonInsertarReclutado.addActionListener(new java.awt.event.ActionListener() {
+        botonReporteReclutados.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        botonReporteReclutados.setForeground(new java.awt.Color(102, 102, 102));
+        botonReporteReclutados.setText("Reclutados");
+        botonReporteReclutados.setBorder(null);
+        botonReporteReclutados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInsertarReclutadoActionPerformed(evt);
+                botonReporteReclutadosActionPerformed(evt);
             }
         });
 
-        botonInsertarAplazado.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        botonInsertarAplazado.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarAplazado.setText("Aplazado");
-        botonInsertarAplazado.setBorder(null);
-        botonInsertarAplazado.addActionListener(new java.awt.event.ActionListener() {
+        botonReporteAplazado.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        botonReporteAplazado.setForeground(new java.awt.Color(102, 102, 102));
+        botonReporteAplazado.setText("Aplazados");
+        botonReporteAplazado.setBorder(null);
+        botonReporteAplazado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInsertarAplazadoActionPerformed(evt);
+                botonReporteAplazadoActionPerformed(evt);
             }
         });
 
-        botonInsertarReservista.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        botonInsertarReservista.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarReservista.setText("Reservista");
-        botonInsertarReservista.setBorder(null);
-        botonInsertarReservista.addActionListener(new java.awt.event.ActionListener() {
+        botonReporteReservista.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        botonReporteReservista.setForeground(new java.awt.Color(102, 102, 102));
+        botonReporteReservista.setText("Reservistas");
+        botonReporteReservista.setBorder(null);
+        botonReporteReservista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInsertarReservistaActionPerformed(evt);
+                botonReporteReservistaActionPerformed(evt);
             }
         });
 
@@ -102,10 +101,10 @@ public class InsertarPersona extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonInsertarReclutado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botonInsertarReservista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botonInsertarAplazado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botonInsertarRemiso, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
+                            .addComponent(botonReporteReclutados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botonReporteReservista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botonReporteAplazado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(botonReporteRemiso, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
                         .addGap(86, 86, 86))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -120,13 +119,13 @@ public class InsertarPersona extends javax.swing.JFrame {
                         .addContainerGap(29, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
-                .addComponent(botonInsertarReclutado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonReporteReclutados, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(botonInsertarReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonReporteReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(botonInsertarRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonReporteRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(botonInsertarAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonReporteAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61))
         );
 
@@ -146,17 +145,17 @@ public class InsertarPersona extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonInsertarAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarAplazadoActionPerformed
+    private void botonReporteAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReporteAplazadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonInsertarAplazadoActionPerformed
+    }//GEN-LAST:event_botonReporteAplazadoActionPerformed
 
-    private void botonInsertarReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReservistaActionPerformed
+    private void botonReporteReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReporteReservistaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonInsertarReservistaActionPerformed
+    }//GEN-LAST:event_botonReporteReservistaActionPerformed
 
-    private void botonInsertarReclutadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReclutadoActionPerformed
+    private void botonReporteReclutadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReporteReclutadosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonInsertarReclutadoActionPerformed
+    }//GEN-LAST:event_botonReporteReclutadosActionPerformed
 
     /**
      * addSalirListener. Agrega un listener al boton de salir.
@@ -165,27 +164,27 @@ public class InsertarPersona extends javax.swing.JFrame {
         botonSalir.addActionListener(listener);
     }
 
-    public void addInsertarReclutadoListener(ActionListener listener) {
-        botonInsertarReclutado.addActionListener(listener);
+    public void addReporteReclutadosListener(ActionListener listener) {
+        botonReporteReclutados.addActionListener(listener);
     }
 
-    public void addInsertarReservistaListener(ActionListener listener) {
-        botonInsertarReservista.addActionListener(listener);
+    public void addReporteReservistasListener(ActionListener listener) {
+        botonReporteReservista.addActionListener(listener);
     }
 
-    public void addInsertarAplazadoListener(ActionListener listener) {
-        botonInsertarAplazado.addActionListener(listener);
+    public void addReporteAplazadosListener(ActionListener listener) {
+        botonReporteAplazado.addActionListener(listener);
     }
 
-    public void addInsertarRemisoListener(ActionListener listener) {
-        botonInsertarRemiso.addActionListener(listener);
+    public void addReporteRemisosListener(ActionListener listener) {
+        botonReporteRemiso.addActionListener(listener);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonInsertarAplazado;
-    private javax.swing.JButton botonInsertarReclutado;
-    private javax.swing.JButton botonInsertarRemiso;
-    private javax.swing.JButton botonInsertarReservista;
+    private javax.swing.JButton botonReporteAplazado;
+    private javax.swing.JButton botonReporteReclutados;
+    private javax.swing.JButton botonReporteRemiso;
+    private javax.swing.JButton botonReporteReservista;
     private javax.swing.JButton botonSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
