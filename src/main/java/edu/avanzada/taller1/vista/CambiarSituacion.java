@@ -4,7 +4,6 @@
  */
 package edu.avanzada.taller1.vista;
 
-
 import edu.avanzada.taller1.control.ControlPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
@@ -260,9 +259,11 @@ public class CambiarSituacion extends javax.swing.JFrame {
     public void mostrarNombre(String nombrePersona) {
         NombreRecluta.setText(nombrePersona);
     }
-public void mostrarSituacionActual(String situacionActualPersona) {
+
+    public void mostrarSituacionActual(String situacionActualPersona) {
         SituacionPersona.setText(situacionActualPersona);
     }
+
     public void resetearCampos() {
         GrupoCambio.clearSelection();
     }

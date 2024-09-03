@@ -26,31 +26,31 @@ import java.util.List;
  * de la interfaz.
  */
 public class ControlPrincipal implements ActionListener {
-    
+
     private ControlReservista controlReservista;
     private ControlAplazado controlAplazado;
     private ControlRemiso controlRemiso;
     private ControlReclutado controlReclutado;
-    
+
     private Menu menu;
-    
+
     private InsertarPersona inserPersona;
     private InsertarReservista inserReservista;
     private InsertarRecluta inserReclutado;
     private InsertarAplazado inserAplazado;
     private InsertarRemiso inserRemiso;
-    
+
     private ConsultarPersona consultarPersona;
     private MostrarConsultaCedula mostrarConsultaPersona;
-    
+
     private CambiarSituacion cambiarSituacion;
     private ActulizarSituacion actualizarSituacion;
-    
+
     private ElegirSituacionReporte elegirSituacionReporte;
     private MostrarReporte mostrarReporte;
-    
+
     VentanaEmergente ventanaEmergente;
-    
+
     public ControlPrincipal() {
         controlReservista = new ControlReservista(this);
         controlAplazado = new ControlAplazado(this);
@@ -64,53 +64,53 @@ public class ControlPrincipal implements ActionListener {
         menu.addConsultarPersonaListener(this);
         menu.addCambiarSituacionMilitarListener(this);
         menu.addReporteEstadoListener(this);
-        
+
         inserPersona = new InsertarPersona(this);
         inserPersona.addSalirListener(this);
         inserPersona.addInsertarReservistaListener(this);
         inserPersona.addInsertarReclutadoListener(this);
         inserPersona.addInsertarAplazadoListener(this);
         inserPersona.addInsertarRemisoListener(this);
-        
+
         inserReclutado = new InsertarRecluta(this);
         inserReclutado.addSalirListener(this);
         inserReclutado.addVolverMenuListener(this);
         inserReclutado.addInsertarReclutaListener(this);
-        
+
         inserReservista = new InsertarReservista(this);
         inserReservista.addSalirListener(this);
         inserReservista.addVolverMenuListener(this);
         inserReservista.addInsertarReclutaListener(this);
-        
+
         inserAplazado = new InsertarAplazado(this);
         inserAplazado.addSalirListener(this);
         inserAplazado.addVolverMenuListener(this);
         inserAplazado.addInsertarAplazadoistener(this);
-        
+
         inserRemiso = new InsertarRemiso(this);
         inserRemiso.addSalirListener(this);
         inserRemiso.addVolverMenuListener(this);
         inserRemiso.addInsertarRemisoListener(this);
-        
+
         consultarPersona = new ConsultarPersona(this);
         consultarPersona.addSalirListener(this);
         consultarPersona.addvolverMenuListener(this);
         consultarPersona.addConsultarPersonaListener(this);
-        
+
         mostrarConsultaPersona = new MostrarConsultaCedula(this);
         mostrarConsultaPersona.addSalirListener(this);
         mostrarConsultaPersona.addvolverMenuListener(this);
-        
+
         cambiarSituacion = new CambiarSituacion(this);
         cambiarSituacion.addSalirListener(this);
         cambiarSituacion.addVolverMenuListener(this);
         cambiarSituacion.addCambiarSituacionListener(this);
-        
+
         actualizarSituacion = new ActulizarSituacion(this);
         actualizarSituacion.addSalirListener(this);
         actualizarSituacion.addvolverMenuListener(this);
         actualizarSituacion.addActualizarSituacionListener(this);
-        
+
         elegirSituacionReporte = new ElegirSituacionReporte(this);
         elegirSituacionReporte.addSalirListener(this);
         elegirSituacionReporte.addvolverMenuListener(this);
@@ -118,12 +118,12 @@ public class ControlPrincipal implements ActionListener {
         elegirSituacionReporte.addReporteReclutadosListener(this);
         elegirSituacionReporte.addReporteAplazadosListener(this);
         elegirSituacionReporte.addReporteRemisosListener(this);
-        
+
         mostrarReporte = new MostrarReporte(this);
         mostrarReporte.addSalirListener(this);
     }
-    
-  /*  public String insertarPersona(Persona persona, EstadoSituacionMilitar estado) {
+
+    /*  public String insertarPersona(Persona persona, EstadoSituacionMilitar estado) {
         switch (estado) {
             case RESERVISTA:
                 return controlReservista.insertarReservista(persona);
@@ -161,9 +161,63 @@ public class ControlPrincipal implements ActionListener {
         // 4. Generar reporte
         // Se delega la acción al control específico según la opción seleccionada
     }
-    */
+     */
+    
+    /**
+     * actionPerformed. Método encargado de "escuchar" los cambios en la
+     * interfaz.
+     *
+     * @param e Variable que recibe los eventos de la interfaz.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if ("Salir".equals(e.getActionCommand())) {
+            System.exit(0);
+        }
+        if ("Volver Menu".equals(e.getActionCommand())) {
+           inserAplazado.setVisible(false);
+           inserAplazado.resetearCamposAplazado();
+           inserReclutado.setVisible(false);
+           inserReclutado.resetearCamposRecluta();
+           inserRemiso.setVisible(false);
+           inserRemiso.resetearCamposRemiso();
+           inserReservista.setVisible(false);
+           inserReservista.resetearCamposReservista();
+           
+           consultarPersona.setVisible(false);
+           consultarPersona.resetearCampos();
+           mostrarConsultaPersona.setVisible(false);
+           
+           actualizarSituacion.setVisible(false);
+           actualizarSituacion.resetearCampos();
+           cambiarSituacion.setVisible(false);
+           cambiarSituacion.resetearCampos();
+           
+           elegirSituacionReporte.setVisible(false);
+           mostrarReporte.setVisible(false);
+        }
+        
+        if ("Insertar Persona".equals(e.getActionCommand())) {
+           
+        }
+        if ("Consultar Persona".equals(e.getActionCommand())) {
+          
+        }
+        if ("Cambiar situacion militar".equals(e.getActionCommand())) {
+            
+        }
+        if ("Generar reporte de estado".equals(e.getActionCommand())) {
+            
+        }
+        
+        
+    }
+    /**
+     * getVentanaEmergente. Método que retorna la ventana emergente.
+     *
+     * @return VentanaEmergente
+     */
+    public VentanaEmergente getVentanaEmergente() {
+        return ventanaEmergente;
     }
 }
