@@ -11,11 +11,14 @@ public class ControlRemiso {
  
     // Lista para almacenar los remisos
     private List<Remiso> remisos;
+    private ControlPrincipal control;
 
     // Constructor
-    public ControlRemiso() {
+    public ControlRemiso(ControlPrincipal control) {
         // Inicializar la lista de remisos
         this.remisos = new ArrayList<>();
+                this.control = control;
+
     }
 
     // Método para insertar un remiso

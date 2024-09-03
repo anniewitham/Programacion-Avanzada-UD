@@ -35,6 +35,7 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
         botonReporteReservista = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        BotonVolverMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -86,6 +87,16 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setText("Eliga el tipo ");
 
+        BotonVolverMenu.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        BotonVolverMenu.setForeground(new java.awt.Color(102, 102, 102));
+        BotonVolverMenu.setText("Volver Menu");
+        BotonVolverMenu.setBorder(null);
+        BotonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonVolverMenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -106,6 +117,10 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
                             .addComponent(botonReporteAplazado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(botonReporteRemiso, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
                         .addGap(86, 86, 86))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(BotonVolverMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +141,9 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
                 .addComponent(botonReporteRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botonReporteAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+                .addGap(10, 10, 10)
+                .addComponent(BotonVolverMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -157,11 +174,21 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonReporteReclutadosActionPerformed
 
+    private void BotonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVolverMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonVolverMenuActionPerformed
+
     /**
      * addSalirListener. Agrega un listener al boton de salir.
      */
     public void addSalirListener(ActionListener listener) {
         botonSalir.addActionListener(listener);
+    }
+     /**
+     * addvolverMenuListener. Agrega un listener al boton de volver menu.
+     */
+    public void addvolverMenuListener(ActionListener listener) {
+        BotonVolverMenu.addActionListener(listener);
     }
 
     public void addReporteReclutadosListener(ActionListener listener) {
@@ -181,6 +208,7 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonVolverMenu;
     private javax.swing.JButton botonReporteAplazado;
     private javax.swing.JButton botonReporteReclutados;
     private javax.swing.JButton botonReporteRemiso;

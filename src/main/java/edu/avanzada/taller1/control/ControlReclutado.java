@@ -9,12 +9,14 @@ import java.util.List;
 
 public class ControlReclutado {
 
-    private List<Reclutado> reclutados; 
+    private List<Reclutado> reclutados;
+    private ControlPrincipal control;
 
     // Constructor
-    public ControlReclutado() {
+    public ControlReclutado(ControlPrincipal control) {
         // Inicializar la lista de reclutados
         this.reclutados = new ArrayList<>();
+        this.control = control;
     }
 
     // Método para insertar un reclutado

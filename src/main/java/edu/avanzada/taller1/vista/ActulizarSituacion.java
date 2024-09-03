@@ -114,11 +114,8 @@ public class ActulizarSituacion extends javax.swing.JFrame {
         botonSalir.addActionListener(listener);
     }
 
-    /**
-     * addConsultarPersonaListener. Agrega un listener al boton de consultar
-     * citas.
-     */
-    public void addConsultarPersonaListener(ActionListener listener) {
+    
+    public void addActualizarSituacionListener(ActionListener listener) {
         botonActualizarSituacion.addActionListener(listener);
     }
 

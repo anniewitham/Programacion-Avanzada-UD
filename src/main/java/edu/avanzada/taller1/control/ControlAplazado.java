@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package edu.avanzada.taller1.control;
 
-/**
- *
- * @author Familia Barrera
- */
 public class ControlAplazado {
+    private ControlPrincipal control;
+
+    public ControlAplazado(ControlPrincipal control) {
+        this.control = control;
+    }
+    
     
 }

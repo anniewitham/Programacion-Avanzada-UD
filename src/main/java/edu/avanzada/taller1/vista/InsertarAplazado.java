@@ -41,7 +41,7 @@ public class InsertarAplazado extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         ApellidoAplazado = new javax.swing.JTextField();
         botonVolver = new javax.swing.JButton();
-        botonInsertarRecluta = new javax.swing.JButton();
+        botonInsertarAplazado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -115,13 +115,13 @@ public class InsertarAplazado extends javax.swing.JFrame {
         botonVolver.setText("Volver Menu");
         botonVolver.setBorder(null);
 
-        botonInsertarRecluta.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
-        botonInsertarRecluta.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarRecluta.setText("Insertar Aplazado");
-        botonInsertarRecluta.setBorder(null);
-        botonInsertarRecluta.addActionListener(new java.awt.event.ActionListener() {
+        botonInsertarAplazado.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        botonInsertarAplazado.setForeground(new java.awt.Color(102, 102, 102));
+        botonInsertarAplazado.setText("Insertar Aplazado");
+        botonInsertarAplazado.setBorder(null);
+        botonInsertarAplazado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInsertarReclutaActionPerformed(evt);
+                botonInsertarAplazadoActionPerformed(evt);
             }
         });
 
@@ -159,7 +159,7 @@ public class InsertarAplazado extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(71, 71, 71)
-                        .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonInsertarAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,7 +195,7 @@ public class InsertarAplazado extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(botonInsertarAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         getContentPane().add(jPanel1);
@@ -216,9 +216,9 @@ public class InsertarAplazado extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ApellidoAplazadoActionPerformed
 
-    private void botonInsertarReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReclutaActionPerformed
+    private void botonInsertarAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarAplazadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonInsertarReclutaActionPerformed
+    }//GEN-LAST:event_botonInsertarAplazadoActionPerformed
 
     private void CedulaAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaAplazadoActionPerformed
         // TODO add your handling code here:
@@ -236,8 +236,8 @@ public class InsertarAplazado extends javax.swing.JFrame {
         botonVolver.addActionListener(listener);
     }
 
-    public void addInsertarReclutaListener(ActionListener listener) {
-        botonInsertarRecluta.addActionListener(listener);
+    public void addInsertarAplazadoistener(ActionListener listener) {
+        botonInsertarAplazado.addActionListener(listener);
     }
 
 //-------------CARGAR----------------
@@ -270,7 +270,7 @@ public class InsertarAplazado extends javax.swing.JFrame {
     private javax.swing.JTextField CedulaAplazado;
     private javax.swing.JTextField FechaAplazado;
     private javax.swing.JTextField NombreAplazado;
-    private javax.swing.JButton botonInsertarRecluta;
+    private javax.swing.JButton botonInsertarAplazado;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonVolver;
     private javax.swing.JLabel jLabel1;

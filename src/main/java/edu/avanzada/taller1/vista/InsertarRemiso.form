@@ -66,7 +66,7 @@
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="botonVolver" min="-2" pref="111" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                          <Component id="botonInsertarReservista" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="botonInsertarRemiso" min="-2" pref="140" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
@@ -112,7 +112,7 @@
                           <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
                           <Component id="botonVolver" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="botonInsertarReservista" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="botonInsertarRemiso" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -242,7 +242,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="botonInsertarReservista">
+        <Component class="javax.swing.JButton" name="botonInsertarRemiso">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lucida Sans" size="12" style="1"/>
@@ -256,7 +256,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonInsertarReservistaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonInsertarRemisoActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -31,7 +31,7 @@ public class InsertarRemiso extends javax.swing.JFrame {
         CedulaRemiso = new javax.swing.JTextField();
         ApellidoRemiso = new javax.swing.JTextField();
         botonVolver = new javax.swing.JButton();
-        botonInsertarReservista = new javax.swing.JButton();
+        botonInsertarRemiso = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -92,13 +92,13 @@ public class InsertarRemiso extends javax.swing.JFrame {
         botonVolver.setText("Volver Menu");
         botonVolver.setBorder(null);
 
-        botonInsertarReservista.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
-        botonInsertarReservista.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarReservista.setText("Insertar Remiso");
-        botonInsertarReservista.setBorder(null);
-        botonInsertarReservista.addActionListener(new java.awt.event.ActionListener() {
+        botonInsertarRemiso.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        botonInsertarRemiso.setForeground(new java.awt.Color(102, 102, 102));
+        botonInsertarRemiso.setText("Insertar Remiso");
+        botonInsertarRemiso.setBorder(null);
+        botonInsertarRemiso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInsertarReservistaActionPerformed(evt);
+                botonInsertarRemisoActionPerformed(evt);
             }
         });
 
@@ -127,7 +127,7 @@ public class InsertarRemiso extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(71, 71, 71)
-                        .addComponent(botonInsertarReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonInsertarRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -164,7 +164,7 @@ public class InsertarRemiso extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(botonInsertarReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(botonInsertarRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         getContentPane().add(jPanel1);
@@ -181,9 +181,9 @@ public class InsertarRemiso extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ApellidoRemisoActionPerformed
 
-    private void botonInsertarReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReservistaActionPerformed
+    private void botonInsertarRemisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarRemisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonInsertarReservistaActionPerformed
+    }//GEN-LAST:event_botonInsertarRemisoActionPerformed
 
     private void CedulaRemisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaRemisoActionPerformed
         // TODO add your handling code here:
@@ -201,8 +201,8 @@ public class InsertarRemiso extends javax.swing.JFrame {
         botonVolver.addActionListener(listener);
     }
 
-    public void addInsertarReclutaListener(ActionListener listener) {
-        botonInsertarReservista.addActionListener(listener);
+    public void addInsertarRemisoListener(ActionListener listener) {
+        botonInsertarRemiso.addActionListener(listener);
     }
 
 //-------------CARGAR----------------
@@ -232,7 +232,7 @@ public class InsertarRemiso extends javax.swing.JFrame {
     private javax.swing.JTextField ApellidoRemiso;
     private javax.swing.JTextField CedulaRemiso;
     private javax.swing.JTextField NombreRemiso;
-    private javax.swing.JButton botonInsertarReservista;
+    private javax.swing.JButton botonInsertarRemiso;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonVolver;
     private javax.swing.JLabel jLabel1;

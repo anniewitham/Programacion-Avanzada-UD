@@ -8,9 +8,11 @@ import java.util.List;
 
 public class ControlReservista {
     private List<Persona> reservistas;
+    private ControlPrincipal control;
 
-    public ControlReservista() {
+    public ControlReservista(ControlPrincipal control) {
         this.reservistas = new ArrayList<>();
+          this.control = control;
     }
 
     public String insertarReservista(Persona persona) {
