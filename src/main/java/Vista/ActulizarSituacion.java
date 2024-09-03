@@ -7,13 +7,13 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 
 
-public class ConsultarPersona extends javax.swing.JFrame {
+public class ActulizarSituacion extends javax.swing.JFrame {
 
     private ControlPrincipal control;
  
 
     
-    public ConsultarPersona(ControlPrincipal aThis) {
+    public ActulizarSituacion(ControlPrincipal aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.control = control;
@@ -26,10 +26,10 @@ public class ConsultarPersona extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        botonConsultarCedula = new javax.swing.JButton();
+        botonActualizarSituacion = new javax.swing.JButton();
         BotonVolverMenu = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
-        jTextFieldConsultarCedula = new javax.swing.JTextField();
+        jTextFieldCedulaActualizarSituacion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -40,21 +40,21 @@ public class ConsultarPersona extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel1.setText("Elija la cedula que consultara");
+        jLabel1.setText("Dijite la cedula de la persona");
         jPanel3.add(jLabel1);
         jLabel1.setBounds(70, 40, 280, 40);
 
-        botonConsultarCedula.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
-        botonConsultarCedula.setForeground(new java.awt.Color(102, 102, 102));
-        botonConsultarCedula.setText("Consultar Cedula");
-        botonConsultarCedula.setBorderPainted(false);
-        botonConsultarCedula.addActionListener(new java.awt.event.ActionListener() {
+        botonActualizarSituacion.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        botonActualizarSituacion.setForeground(new java.awt.Color(102, 102, 102));
+        botonActualizarSituacion.setText("Consultar Cedula");
+        botonActualizarSituacion.setBorderPainted(false);
+        botonActualizarSituacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonConsultarCedulaActionPerformed(evt);
+                botonActualizarSituacionActionPerformed(evt);
             }
         });
-        jPanel3.add(botonConsultarCedula);
-        botonConsultarCedula.setBounds(220, 150, 170, 30);
+        jPanel3.add(botonActualizarSituacion);
+        botonActualizarSituacion.setBounds(220, 150, 170, 30);
 
         BotonVolverMenu.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         BotonVolverMenu.setForeground(new java.awt.Color(102, 102, 102));
@@ -78,8 +78,8 @@ public class ConsultarPersona extends javax.swing.JFrame {
         botonSalir.setBorder(null);
         jPanel3.add(botonSalir);
         botonSalir.setBounds(331, 10, 80, 30);
-        jPanel3.add(jTextFieldConsultarCedula);
-        jTextFieldConsultarCedula.setBounds(70, 80, 280, 50);
+        jPanel3.add(jTextFieldCedulaActualizarSituacion);
+        jTextFieldCedulaActualizarSituacion.setBounds(70, 80, 280, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,9 +95,9 @@ public class ConsultarPersona extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonConsultarCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConsultarCedulaActionPerformed
+    private void botonActualizarSituacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarSituacionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonConsultarCedulaActionPerformed
+    }//GEN-LAST:event_botonActualizarSituacionActionPerformed
 
     private void BotonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVolverMenuActionPerformed
         // TODO add your handling code here:
@@ -118,7 +118,7 @@ public class ConsultarPersona extends javax.swing.JFrame {
      * citas.
      */
     public void addConsultarPersonaListener(ActionListener listener) {
-        botonConsultarCedula.addActionListener(listener);
+        botonActualizarSituacion.addActionListener(listener);
     }
 
     /**
@@ -132,22 +132,22 @@ public class ConsultarPersona extends javax.swing.JFrame {
     /**
      * cargarConsultaCedula. Retorna el campo de texto de la cedula.
      */
-    public JTextField cargarConsultaCedula() {
-        return jTextFieldConsultarCedula;
+    public JTextField cargarCedulaActualizar() {
+        return jTextFieldCedulaActualizarSituacion;
     }
 
     /**
      * resetearCampos. Resetea los campos de texto.
      */
     public void resetearCampos() {
-        jTextFieldConsultarCedula.setText("");
+        jTextFieldCedulaActualizarSituacion.setText("");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonVolverMenu;
-    private javax.swing.JButton botonConsultarCedula;
+    private javax.swing.JButton botonActualizarSituacion;
     private javax.swing.JButton botonSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextFieldConsultarCedula;
+    private javax.swing.JTextField jTextFieldCedulaActualizarSituacion;
     // End of variables declaration//GEN-END:variables
 }
