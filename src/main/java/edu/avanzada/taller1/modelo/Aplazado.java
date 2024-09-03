@@ -21,4 +21,4 @@ public class Aplazado extends Remiso{
     public void setFechaAplazamiento(Date fechaAplazamiento) {
         this.fechaAplazamiento = fechaAplazamiento;
     } 
-}
+

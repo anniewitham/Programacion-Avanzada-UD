@@ -59,6 +59,3 @@ public class ControlPrincipal {
         }
         return null; // Persona no encontrada
     }
-    
-     
-}
