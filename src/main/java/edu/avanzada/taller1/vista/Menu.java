@@ -1,7 +1,7 @@
 
-package Vista;
+package edu.avanzada.taller1.vista;
 
-import Control.ControlPrincipal;
+import edu.avanzada.taller1.control.ControlPrincipal;
 import java.awt.event.ActionListener;
 
 

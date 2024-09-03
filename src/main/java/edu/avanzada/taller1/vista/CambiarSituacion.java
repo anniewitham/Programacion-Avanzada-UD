@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vista;
+package edu.avanzada.taller1.vista;
 
-import Control.ControlPrincipal;
+
+import edu.avanzada.taller1.control.ControlPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 

@@ -1,4 +1,4 @@
-package Vista;
+package edu.avanzada.taller1.vista;
 
 import javax.swing.JOptionPane;
 

@@ -1,20 +1,20 @@
-package Vista;
+package edu.avanzada.taller1.vista;
 
-import Control.ControlPrincipal;
+import edu.avanzada.taller1.control.ControlPrincipal;
 import java.awt.event.ActionListener;
 
 /**
  * MostrarConsultaCedula. Ventana que permite mostrar los datos de una persona
  * buscado por cedula.
  */
-public class MostrarReporte extends javax.swing.JFrame {
+public class MostrarConsultaCedula extends javax.swing.JFrame {
 
     private ControlPrincipal control;
 
     /**
      * MostrarConsultaCedula. Ventana que permite mostrar los datos de un
      */
-    public MostrarReporte(ControlPrincipal aThis) {
+    public MostrarConsultaCedula(ControlPrincipal aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.control = control;
@@ -32,7 +32,7 @@ public class MostrarReporte extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        AreaMostrarReporte = new javax.swing.JTextArea();
+        AreaMostrarDatos = new javax.swing.JTextArea();
         BotonVolverMenu = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
 
@@ -46,17 +46,17 @@ public class MostrarReporte extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel1.setText("Reporte");
+        jLabel1.setText("Datos ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(120, 10, 130, 40);
+        jLabel1.setBounds(140, 10, 130, 40);
 
-        AreaMostrarReporte.setEditable(false);
-        AreaMostrarReporte.setBackground(new java.awt.Color(255, 255, 255));
-        AreaMostrarReporte.setColumns(20);
-        AreaMostrarReporte.setFont(new java.awt.Font("Lucida Sans", 0, 18)); // NOI18N
-        AreaMostrarReporte.setForeground(new java.awt.Color(102, 102, 102));
-        AreaMostrarReporte.setRows(5);
-        jScrollPane2.setViewportView(AreaMostrarReporte);
+        AreaMostrarDatos.setEditable(false);
+        AreaMostrarDatos.setBackground(new java.awt.Color(255, 255, 255));
+        AreaMostrarDatos.setColumns(20);
+        AreaMostrarDatos.setFont(new java.awt.Font("Lucida Sans", 0, 18)); // NOI18N
+        AreaMostrarDatos.setForeground(new java.awt.Color(102, 102, 102));
+        AreaMostrarDatos.setRows(5);
+        jScrollPane2.setViewportView(AreaMostrarDatos);
 
         jPanel1.add(jScrollPane2);
         jScrollPane2.setBounds(30, 60, 320, 270);
@@ -119,17 +119,17 @@ public class MostrarReporte extends javax.swing.JFrame {
      * ventana.
      */
     public void resetearCamposAsistente() {
-        AreaMostrarReporte.setText("");
+        AreaMostrarDatos.setText("");
     }
 
     /**
      * mostrarAsistente. Metodo que permite mostrar los datos de un asistente.
      */
-    public void mostrarReporte (String mostrarReporte) {
-        AreaMostrarReporte.setText(mostrarReporte);
+    public void mostrarPersona(String datosPersona) {
+        AreaMostrarDatos.setText(datosPersona);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea AreaMostrarReporte;
+    private javax.swing.JTextArea AreaMostrarDatos;
     private javax.swing.JButton BotonVolverMenu;
     private javax.swing.JButton botonSalir;
     private javax.swing.JLabel jLabel1;

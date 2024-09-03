@@ -91,17 +91,17 @@
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/volver.png"/>
+              <Image iconType="3" name="/edu/avanzada/taller1/vista/volver.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Volver Menu"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
             <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/volver 32.png"/>
+              <Image iconType="3" name="/edu/avanzada/taller1/vista/volver 32.png"/>
             </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/volver 32.png"/>
+              <Image iconType="3" name="/edu/avanzada/taller1/vista/volver 32.png"/>
             </Property>
           </Properties>
           <Events>

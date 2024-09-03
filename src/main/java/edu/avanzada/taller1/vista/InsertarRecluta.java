@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vista;
+package edu.avanzada.taller1.vista;
 
-import Control.ControlPrincipal;
+import edu.avanzada.taller1.control.ControlPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
@@ -12,14 +12,14 @@ import javax.swing.JTextField;
  *
  * @author Personal
  */
-public class InsertarAplazado extends javax.swing.JFrame {
+public class InsertarRecluta extends javax.swing.JFrame {
 
     private ControlPrincipal control;
 
     /**
      * Creates new form InsertarRecluta
      */
-    public InsertarAplazado(ControlPrincipal aThis) {
+    public InsertarRecluta(ControlPrincipal aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setLocationRelativeTo(null);
@@ -33,13 +33,13 @@ public class InsertarAplazado extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         botonSalir = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        NombreAplazado = new javax.swing.JTextField();
+        NombreRecluta = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        FechaAplazado = new javax.swing.JTextField();
+        CodigoReclutamienttoRecluta = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        CedulaAplazado = new javax.swing.JTextField();
+        CedulaRecluta = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        ApellidoAplazado = new javax.swing.JTextField();
+        ApellidoRecluta = new javax.swing.JTextField();
         botonVolver = new javax.swing.JButton();
         botonInsertarRecluta = new javax.swing.JButton();
 
@@ -50,7 +50,7 @@ public class InsertarAplazado extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel1.setText("Insertar Aplazado");
+        jLabel1.setText("Insertar Recluta");
 
         botonSalir.setBackground(new java.awt.Color(204, 255, 153));
         botonSalir.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
@@ -62,12 +62,12 @@ public class InsertarAplazado extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("Nombre:");
 
-        NombreAplazado.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        NombreAplazado.setForeground(new java.awt.Color(102, 102, 102));
-        NombreAplazado.setBorder(null);
-        NombreAplazado.addActionListener(new java.awt.event.ActionListener() {
+        NombreRecluta.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        NombreRecluta.setForeground(new java.awt.Color(102, 102, 102));
+        NombreRecluta.setBorder(null);
+        NombreRecluta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombreAplazadoActionPerformed(evt);
+                NombreReclutaActionPerformed(evt);
             }
         });
 
@@ -75,12 +75,12 @@ public class InsertarAplazado extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(102, 102, 102));
         jLabel9.setText("Apellido:");
 
-        FechaAplazado.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        FechaAplazado.setForeground(new java.awt.Color(102, 102, 102));
-        FechaAplazado.setBorder(null);
-        FechaAplazado.addActionListener(new java.awt.event.ActionListener() {
+        CodigoReclutamienttoRecluta.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        CodigoReclutamienttoRecluta.setForeground(new java.awt.Color(102, 102, 102));
+        CodigoReclutamienttoRecluta.setBorder(null);
+        CodigoReclutamienttoRecluta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FechaAplazadoActionPerformed(evt);
+                CodigoReclutamienttoReclutaActionPerformed(evt);
             }
         });
 
@@ -88,25 +88,25 @@ public class InsertarAplazado extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setText("Cedula:");
 
-        CedulaAplazado.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        CedulaAplazado.setForeground(new java.awt.Color(102, 102, 102));
-        CedulaAplazado.setBorder(null);
-        CedulaAplazado.addActionListener(new java.awt.event.ActionListener() {
+        CedulaRecluta.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        CedulaRecluta.setForeground(new java.awt.Color(102, 102, 102));
+        CedulaRecluta.setBorder(null);
+        CedulaRecluta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CedulaAplazadoActionPerformed(evt);
+                CedulaReclutaActionPerformed(evt);
             }
         });
 
         jLabel10.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Fecha aplazamiento:");
+        jLabel10.setText("Codigo de reclutamiento");
 
-        ApellidoAplazado.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        ApellidoAplazado.setForeground(new java.awt.Color(102, 102, 102));
-        ApellidoAplazado.setBorder(null);
-        ApellidoAplazado.addActionListener(new java.awt.event.ActionListener() {
+        ApellidoRecluta.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        ApellidoRecluta.setForeground(new java.awt.Color(102, 102, 102));
+        ApellidoRecluta.setBorder(null);
+        ApellidoRecluta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ApellidoAplazadoActionPerformed(evt);
+                ApellidoReclutaActionPerformed(evt);
             }
         });
 
@@ -117,7 +117,7 @@ public class InsertarAplazado extends javax.swing.JFrame {
 
         botonInsertarRecluta.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         botonInsertarRecluta.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarRecluta.setText("Insertar Aplazado");
+        botonInsertarRecluta.setText("Insertar Recluta");
         botonInsertarRecluta.setBorder(null);
         botonInsertarRecluta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,66 +130,64 @@ public class InsertarAplazado extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(298, 298, 298)
-                        .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(NombreAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(ApellidoAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(CedulaAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(FechaAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71)
-                        .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(6, 6, 6))
+                .addGap(298, 298, 298)
+                .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(NombreRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(ApellidoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(CedulaRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(CodigoReclutamienttoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71)
+                .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel8)
                 .addGap(5, 5, 5)
-                .addComponent(NombreAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(NombreRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel9)
                 .addGap(5, 5, 5)
-                .addComponent(ApellidoAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ApellidoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel11)
                 .addGap(5, 5, 5)
-                .addComponent(CedulaAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CedulaRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel10)
                 .addGap(5, 5, 5)
-                .addComponent(FechaAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CodigoReclutamienttoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -204,25 +202,25 @@ public class InsertarAplazado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void FechaAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechaAplazadoActionPerformed
+    private void CodigoReclutamienttoReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoReclutamienttoReclutaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_FechaAplazadoActionPerformed
+    }//GEN-LAST:event_CodigoReclutamienttoReclutaActionPerformed
 
-    private void NombreAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreAplazadoActionPerformed
+    private void NombreReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreReclutaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombreAplazadoActionPerformed
+    }//GEN-LAST:event_NombreReclutaActionPerformed
 
-    private void ApellidoAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoAplazadoActionPerformed
+    private void ApellidoReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoReclutaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ApellidoAplazadoActionPerformed
+    }//GEN-LAST:event_ApellidoReclutaActionPerformed
 
     private void botonInsertarReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReclutaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonInsertarReclutaActionPerformed
 
-    private void CedulaAplazadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaAplazadoActionPerformed
+    private void CedulaReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaReclutaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CedulaAplazadoActionPerformed
+    }//GEN-LAST:event_CedulaReclutaActionPerformed
 //------------LISTENER-------------
 
     /**
@@ -242,34 +240,34 @@ public class InsertarAplazado extends javax.swing.JFrame {
 
 //-------------CARGAR----------------
     public JTextField cargarNombreRecluta() {
-        return NombreAplazado;
+        return NombreRecluta;
     }
 
     public JTextField cargarApellidoRecluta() {
-        return ApellidoAplazado;
+        return ApellidoRecluta;
     }
 
     public JTextField cargarCedulaRecluta() {
-        return CedulaAplazado;
+        return CedulaRecluta;
     }
 
     public JTextField cargarCodigoReclutamiento() {
-        return FechaAplazado;
+        return CodigoReclutamienttoRecluta;
     }
 
 //--------------RSETEAR CAMPOS-----------
-    public void resetearCamposAplazado() {
-        NombreAplazado.setText("");
-        ApellidoAplazado.setText("");
-        CedulaAplazado.setText("");
-        FechaAplazado.setText("");
+    public void resetearCamposRecluta() {
+        NombreRecluta.setText("");
+        ApellidoRecluta.setText("");
+        CedulaRecluta.setText("");
+        CodigoReclutamienttoRecluta.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ApellidoAplazado;
-    private javax.swing.JTextField CedulaAplazado;
-    private javax.swing.JTextField FechaAplazado;
-    private javax.swing.JTextField NombreAplazado;
+    private javax.swing.JTextField ApellidoRecluta;
+    private javax.swing.JTextField CedulaRecluta;
+    private javax.swing.JTextField CodigoReclutamienttoRecluta;
+    private javax.swing.JTextField NombreRecluta;
     private javax.swing.JButton botonInsertarRecluta;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonVolver;

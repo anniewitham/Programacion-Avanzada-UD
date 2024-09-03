@@ -1,6 +1,7 @@
-package Vista;
+package edu.avanzada.taller1.vista;
 
-import Control.ControlPrincipal;
+
+import edu.avanzada.taller1.control.ControlPrincipal;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
@@ -58,11 +59,11 @@ public class ActulizarSituacion extends javax.swing.JFrame {
 
         BotonVolverMenu.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         BotonVolverMenu.setForeground(new java.awt.Color(102, 102, 102));
-        BotonVolverMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/volver.png"))); // NOI18N
+        BotonVolverMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver.png"))); // NOI18N
         BotonVolverMenu.setText("Volver Menu");
         BotonVolverMenu.setBorder(null);
-        BotonVolverMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/volver 32.png"))); // NOI18N
-        BotonVolverMenu.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/volver 32.png"))); // NOI18N
+        BotonVolverMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver 32.png"))); // NOI18N
+        BotonVolverMenu.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver 32.png"))); // NOI18N
         BotonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonVolverMenuActionPerformed(evt);

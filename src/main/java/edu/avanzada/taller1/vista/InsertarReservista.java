@@ -1,17 +1,17 @@
 
-package Vista;
+package edu.avanzada.taller1.vista;
 
-import Control.ControlPrincipal;
+import edu.avanzada.taller1.control.ControlPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
 
-public class InsertarRemiso extends javax.swing.JFrame {
+public class InsertarReservista extends javax.swing.JFrame {
  private ControlPrincipal control;
     /**
      * Creates new form InsertarRecluta
      */
-    public InsertarRemiso(ControlPrincipal aThis) {
+    public InsertarReservista(ControlPrincipal aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setLocationRelativeTo(null);
@@ -25,11 +25,13 @@ public class InsertarRemiso extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         botonSalir = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        NombreRemiso = new javax.swing.JTextField();
+        NombreReservista = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        LibretaMilitar = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        CedulaRemiso = new javax.swing.JTextField();
-        ApellidoRemiso = new javax.swing.JTextField();
+        CedulaReservista = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        ApellidoReservista = new javax.swing.JTextField();
         botonVolver = new javax.swing.JButton();
         botonInsertarReservista = new javax.swing.JButton();
 
@@ -40,7 +42,7 @@ public class InsertarRemiso extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel1.setText("Insertar Remiso");
+        jLabel1.setText("Insertar Reservista");
 
         botonSalir.setBackground(new java.awt.Color(204, 255, 153));
         botonSalir.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
@@ -52,12 +54,12 @@ public class InsertarRemiso extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("Nombre:");
 
-        NombreRemiso.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        NombreRemiso.setForeground(new java.awt.Color(102, 102, 102));
-        NombreRemiso.setBorder(null);
-        NombreRemiso.addActionListener(new java.awt.event.ActionListener() {
+        NombreReservista.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        NombreReservista.setForeground(new java.awt.Color(102, 102, 102));
+        NombreReservista.setBorder(null);
+        NombreReservista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NombreRemisoActionPerformed(evt);
+                NombreReservistaActionPerformed(evt);
             }
         });
 
@@ -65,25 +67,38 @@ public class InsertarRemiso extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(102, 102, 102));
         jLabel9.setText("Apellido:");
 
+        LibretaMilitar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        LibretaMilitar.setForeground(new java.awt.Color(102, 102, 102));
+        LibretaMilitar.setBorder(null);
+        LibretaMilitar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LibretaMilitarActionPerformed(evt);
+            }
+        });
+
         jLabel11.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setText("Cedula:");
 
-        CedulaRemiso.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        CedulaRemiso.setForeground(new java.awt.Color(102, 102, 102));
-        CedulaRemiso.setBorder(null);
-        CedulaRemiso.addActionListener(new java.awt.event.ActionListener() {
+        CedulaReservista.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        CedulaReservista.setForeground(new java.awt.Color(102, 102, 102));
+        CedulaReservista.setBorder(null);
+        CedulaReservista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CedulaRemisoActionPerformed(evt);
+                CedulaReservistaActionPerformed(evt);
             }
         });
 
-        ApellidoRemiso.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        ApellidoRemiso.setForeground(new java.awt.Color(102, 102, 102));
-        ApellidoRemiso.setBorder(null);
-        ApellidoRemiso.addActionListener(new java.awt.event.ActionListener() {
+        jLabel10.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel10.setText("Libreta Militar");
+
+        ApellidoReservista.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        ApellidoReservista.setForeground(new java.awt.Color(102, 102, 102));
+        ApellidoReservista.setBorder(null);
+        ApellidoReservista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ApellidoRemisoActionPerformed(evt);
+                ApellidoReservistaActionPerformed(evt);
             }
         });
 
@@ -94,7 +109,7 @@ public class InsertarRemiso extends javax.swing.JFrame {
 
         botonInsertarReservista.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         botonInsertarReservista.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarReservista.setText("Insertar Remiso");
+        botonInsertarReservista.setText("Insertar Reservista");
         botonInsertarReservista.setBorder(null);
         botonInsertarReservista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,31 +128,35 @@ public class InsertarRemiso extends javax.swing.JFrame {
                         .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
+                        .addComponent(NombreReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
-                        .addComponent(ApellidoRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ApellidoReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
-                        .addComponent(CedulaRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CedulaReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(LibretaMilitar, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(71, 71, 71)
+                        .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
                         .addComponent(botonInsertarReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(60, 60, 60)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(NombreRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(6, 6, 6))
         );
         jPanel1Layout.setVerticalGroup(
@@ -150,16 +169,20 @@ public class InsertarRemiso extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addGap(5, 5, 5)
-                .addComponent(NombreRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addComponent(NombreReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ApellidoRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(5, 5, 5)
+                .addComponent(ApellidoReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
                 .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CedulaRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(5, 5, 5)
+                .addComponent(CedulaReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel10)
+                .addGap(5, 5, 5)
+                .addComponent(LibretaMilitar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
@@ -173,21 +196,25 @@ public class InsertarRemiso extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NombreRemisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreRemisoActionPerformed
+    private void LibretaMilitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LibretaMilitarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NombreRemisoActionPerformed
+    }//GEN-LAST:event_LibretaMilitarActionPerformed
 
-    private void ApellidoRemisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoRemisoActionPerformed
+    private void NombreReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreReservistaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ApellidoRemisoActionPerformed
+    }//GEN-LAST:event_NombreReservistaActionPerformed
+
+    private void ApellidoReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoReservistaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApellidoReservistaActionPerformed
 
     private void botonInsertarReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReservistaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonInsertarReservistaActionPerformed
 
-    private void CedulaRemisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaRemisoActionPerformed
+    private void CedulaReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaReservistaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CedulaRemisoActionPerformed
+    }//GEN-LAST:event_CedulaReservistaActionPerformed
 //------------LISTENER-------------
 
     /**
@@ -206,36 +233,40 @@ public class InsertarRemiso extends javax.swing.JFrame {
     }
 
 //-------------CARGAR----------------
-    public JTextField cargarNombreRemiso() {
-        return NombreRemiso;
+    public JTextField cargarNombreReservista() {
+        return NombreReservista;
     }
 
-    public JTextField cargarApellidoRemiso() {
-        return ApellidoRemiso;
+    public JTextField cargarApellidoReservista() {
+        return ApellidoReservista;
     }
 
-    public JTextField cargarCedulaRemiso() {
-        return CedulaRemiso;
+    public JTextField cargarCedulaReservista() {
+        return CedulaReservista;
     }
 
-   
+    public JTextField cargarLibretaMilitar() {
+        return LibretaMilitar;
+    }
 
 //--------------RSETEAR CAMPOS-----------
-    public void resetearCamposRemiso() {
-        NombreRemiso.setText("");
-        ApellidoRemiso.setText("");
-        CedulaRemiso.setText("");
-        
+    public void resetearCamposReservista() {
+        NombreReservista.setText("");
+        ApellidoReservista.setText("");
+        CedulaReservista.setText("");
+        LibretaMilitar.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ApellidoRemiso;
-    private javax.swing.JTextField CedulaRemiso;
-    private javax.swing.JTextField NombreRemiso;
+    private javax.swing.JTextField ApellidoReservista;
+    private javax.swing.JTextField CedulaReservista;
+    private javax.swing.JTextField LibretaMilitar;
+    private javax.swing.JTextField NombreReservista;
     private javax.swing.JButton botonInsertarReservista;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonVolver;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

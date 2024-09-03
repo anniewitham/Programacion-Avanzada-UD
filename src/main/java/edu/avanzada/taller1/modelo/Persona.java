@@ -1,11 +1,13 @@
-package Modelo;
+package edu.avanzada.taller1.modelo;
 
-public class Persona {
-
+//Clase padre y abstracta Persona
+public abstract class Persona {
+    //Declaración de los atributos de Persona
     private String nombre;
     private String apellido;
     private String cedula;
 
+    //Métodos constructor
     public Persona() {
     }
 
@@ -15,7 +17,7 @@ public class Persona {
         this.cedula = cedula;
     }
             
-
+    //Getters y Setters
     public String getNombre() {
         return nombre;
     }
