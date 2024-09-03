@@ -19,4 +19,5 @@ public class Reservista extends Persona {
     public void setLibreta(String libreta) {
         this.libreta = libreta;
     }
+}
 

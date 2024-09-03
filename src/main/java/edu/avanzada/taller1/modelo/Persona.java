@@ -41,5 +41,6 @@ public abstract class Persona {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+}
 
 

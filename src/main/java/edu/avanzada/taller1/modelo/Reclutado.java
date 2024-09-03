@@ -19,3 +19,4 @@ public class Reclutado extends Persona {
     public void setCodigoReclutamiento(String codigoReclutamiento) {
         this.codigoReclutamiento = codigoReclutamiento;
     }
+}

@@ -2,60 +2,61 @@
 package edu.avanzada.taller1.control;
 
 import edu.avanzada.taller1.modelo.Persona;
+import edu.avanzada.taller1.modelo.Reclutado;
+import edu.avanzada.taller1.modelo.Remiso;
 import java.util.List;
 
 //Esta clase es la encargada de la lógica del proyecto
 public class ControlPrincipal {
-    
-    private List<Persona> personas;
-    
-    //Método para insertar personas para poder trabajar con las mismas
-    public String insertarPersona(Persona persona) {
-         if (persona == null) {
-             
-             //Esta excepción nos ayuda a verificar que 
-             //no se quiere insertar una persina sin datos
-             
-            throw new IllegalArgumentException("Error: La persona no puede ser nula.");
-        }
 
-        String cedula = persona.getCedula();
-        if (cedula == null) {
-            //Al ser la cedula en dato más importante, no se debe registrar una persona sin cedula
-            throw new IllegalArgumentException("Error: La cédula no puede ser nula.");
-        }
+    private ControlReservista controlReservista;
+    private ControlAplazado controlAplazado;
+    private ControlRemiso controlRemiso;
+    private ControlReclutado controlReclutado;
 
-        if (cedula.isEmpty()) {
-            throw new IllegalArgumentException("Error: La cédula no puede estar vacía.");
-        }
-
-        // Verificar si la cédula ya está en la lista
-        for (Persona p : personas) {
-            if (p.getCedula().equals(cedula)) {
-                return "Error: La persona con cédula " + cedula + " ya está registrada.";
-            }
-        }
-
-        personas.add(persona);
-        return "Persona con cédula " + cedula + " insertada exitosamente.";
-    //Finalmente, si persona tiene los datos completos, se dejará insertar
+    public ControlPrincipal {
+        this.controlReservista = new ControlReservista();
+        this.controlAplazado = new ControlAplazado();
+        this.controlRemiso = new ControlRemiso();
+        this.controlReclutado = new ControlReclutado();
     }
-    //Método para consultar personas ya registradas
-    public Persona consultarPersona(String cedula) {
-       if (cedula == null) {
-           //En esta excepción verificamos que no se trate de consultar una persona sin colocar su cedula
-            throw new IllegalArgumentException("Error: La cédula no puede ser nula.");
-        }
 
-        if (cedula.isEmpty()) {
-            throw new IllegalArgumentException("Error: La cédula no puede estar vacía.");
+    public String insertarPersona(Persona persona, EstadoSituacionMilitar estado) {
+        switch (estado) {
+            case RESERVISTA:
+                return controlReservista.insertarReservista(persona);
+            case APLAZADO:
+                return controlAplazado.insertarAplazado(persona);
+            case REMISO:
+                return controlRemiso.insertarRemiso((Remiso) persona);
+            case RECLUTADO:
+                return controlReclutado.insertarReclutado((Reclutado) persona);
+            default:
+                return "Estado no reconocido.";
         }
-
-        // Buscar persona en la lista
-        for (Persona p : personas) {
-            if (p.getCedula().equals(cedula)) {
-                return p; // Persona encontrada
-            }
-        }
-        return null; // Persona no encontrada
     }
+
+    public Persona consultarPersona(String cedula, EstadoSituacionMilitar estado) {
+        switch (estado) {
+            case RESERVISTA:
+                return controlReservista.consultarReservista(cedula);
+            case APLAZADO:
+                return controlAplazado.consultarAplazado(cedula);
+            case REMISO:
+                return controlRemiso.consultarRemiso(cedula);
+            case RECLUTADO:
+                return controlReclutado.consultarReclutado(cedula);
+            default:
+                return null;
+        }
+    }
+
+    // Lógica para el menú
+    public void mostrarMenu() {
+        // 1. Insertar persona
+        // 2. Consultar persona
+        // 3. Cambiar estado
+        // 4. Generar reporte
+        // Se delega la acción al control específico según la opción seleccionada
+    }
+}
