@@ -1,40 +1,30 @@
 package edu.avanzada.taller1.vista;
 
+import edu.avanzada.taller1.control.ControlCambiarSituacion;
 
-import edu.avanzada.taller1.control.ControlPrincipal;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JTextField;
+public class VistaCambiarSituacion extends javax.swing.JFrame {
 
-
-public class ActulizarSituacion extends javax.swing.JFrame {
-
-    private ControlPrincipal control;
- 
-
+    private ControlCambiarSituacion control;
     
-    public ActulizarSituacion(ControlPrincipal aThis) {
+    public VistaCambiarSituacion(ControlCambiarSituacion aThis) {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.control = control;
+        control = aThis;
+        setLocationRelativeTo(null);
+        setVisible(true);
+        setResizable(false);
+        setTitle("Cambiar Situación Militar");
     }
-
-
-    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         botonActualizarSituacion = new javax.swing.JButton();
-        BotonVolverMenu = new javax.swing.JButton();
+        botonVolver = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
-        jTextFieldCedulaActualizarSituacion = new javax.swing.JTextField();
+        campoCedula = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(204, 245, 183));
         jPanel3.setLayout(null);
@@ -57,20 +47,17 @@ public class ActulizarSituacion extends javax.swing.JFrame {
         jPanel3.add(botonActualizarSituacion);
         botonActualizarSituacion.setBounds(220, 150, 170, 30);
 
-        BotonVolverMenu.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
-        BotonVolverMenu.setForeground(new java.awt.Color(102, 102, 102));
-        BotonVolverMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver.png"))); // NOI18N
-        BotonVolverMenu.setText("Volver Menu");
-        BotonVolverMenu.setBorder(null);
-        BotonVolverMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver 32.png"))); // NOI18N
-        BotonVolverMenu.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver 32.png"))); // NOI18N
-        BotonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
+        botonVolver.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        botonVolver.setForeground(new java.awt.Color(102, 102, 102));
+        botonVolver.setText("Volver");
+        botonVolver.setBorder(null);
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonVolverMenuActionPerformed(evt);
+                botonVolverActionPerformed(evt);
             }
         });
-        jPanel3.add(BotonVolverMenu);
-        BotonVolverMenu.setBounds(40, 150, 130, 30);
+        jPanel3.add(botonVolver);
+        botonVolver.setBounds(40, 150, 130, 30);
 
         botonSalir.setBackground(new java.awt.Color(204, 255, 153));
         botonSalir.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
@@ -79,8 +66,8 @@ public class ActulizarSituacion extends javax.swing.JFrame {
         botonSalir.setBorder(null);
         jPanel3.add(botonSalir);
         botonSalir.setBounds(331, 10, 80, 30);
-        jPanel3.add(jTextFieldCedulaActualizarSituacion);
-        jTextFieldCedulaActualizarSituacion.setBounds(70, 80, 280, 50);
+        jPanel3.add(campoCedula);
+        campoCedula.setBounds(70, 80, 280, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,52 +87,16 @@ public class ActulizarSituacion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonActualizarSituacionActionPerformed
 
-    private void BotonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVolverMenuActionPerformed
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BotonVolverMenuActionPerformed
-//------------- LISTENER----------
+    }//GEN-LAST:event_botonVolverActionPerformed
 
-    /**
-     * Agrega un listener al boton de salir.
-     *
-     * @param listener
-     */
-    public void addSalirListener(ActionListener listener) {
-        botonSalir.addActionListener(listener);
-    }
-
-    
-    public void addActualizarSituacionListener(ActionListener listener) {
-        botonActualizarSituacion.addActionListener(listener);
-    }
-
-    /**
-     * addvolverMenuListener. Agrega un listener al boton de volver menu.
-     */
-    public void addvolverMenuListener(ActionListener listener) {
-        BotonVolverMenu.addActionListener(listener);
-    }
-
-    //--------
-    /**
-     * cargarConsultaCedula. Retorna el campo de texto de la cedula.
-     */
-    public JTextField cargarCedulaActualizar() {
-        return jTextFieldCedulaActualizarSituacion;
-    }
-
-    /**
-     * resetearCampos. Resetea los campos de texto.
-     */
-    public void resetearCampos() {
-        jTextFieldCedulaActualizarSituacion.setText("");
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonVolverMenu;
-    private javax.swing.JButton botonActualizarSituacion;
-    private javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonActualizarSituacion;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonVolver;
+    public javax.swing.JTextField campoCedula;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextFieldCedulaActualizarSituacion;
     // End of variables declaration//GEN-END:variables
 }

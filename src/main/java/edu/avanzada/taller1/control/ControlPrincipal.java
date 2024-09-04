@@ -12,14 +12,18 @@ import java.util.ArrayList;
  * de la interfaz.
  */
 public class ControlPrincipal implements ActionListener {
-    private ControlInsertarPersona ControlInsertar;
-    private ControlConsultarPersona ControlConsultar;
+    private ControlInsertarPersona controlInsertar;
+    private ControlConsultarPersona controlConsultar;
+    private ControlCambiarSituacion controlCambiarSituacion;
+    private ControlGenerarReporte controlGenerarReporte;
     private VistaMenu menu;
     public ArrayList<Persona> personas;
     
     public ControlPrincipal() {
-        ControlInsertar = new ControlInsertarPersona(this);
-        ControlConsultar = new ControlConsultarPersona(this);
+        controlInsertar = new ControlInsertarPersona(this);
+        controlConsultar = new ControlConsultarPersona(this);
+        controlCambiarSituacion = new ControlCambiarSituacion(this);
+        controlGenerarReporte = new ControlGenerarReporte(this);
         
         personas = new ArrayList<>();
         
@@ -52,17 +56,20 @@ public class ControlPrincipal implements ActionListener {
         }
         if ("Insertar Persona".equals(e.getActionCommand())) {
             menu.dispose();
-            ControlInsertar.crearVistaInsertarPersona();
+            controlInsertar.crearVistaInsertarPersona();
         }
         if ("Consultar Persona".equals(e.getActionCommand())) {
             menu.dispose();
-            ControlConsultar.crearVistaConsultarPersona();
+            controlConsultar.crearVistaConsultarPersona();
         }
         if ("Cambiar situacion militar".equals(e.getActionCommand())) {
             menu.dispose();
+            controlCambiarSituacion.crearVistaCambiarSituacion();
+            
         }
         if ("Generar reporte de estado".equals(e.getActionCommand())) {
             menu.dispose();
+            controlGenerarReporte.crearVistaGenerarReporte();
         }
     }
 }

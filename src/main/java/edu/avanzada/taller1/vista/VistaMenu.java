@@ -8,11 +8,6 @@ public class VistaMenu extends javax.swing.JFrame {
     
     private ControlPrincipal control;
     
-
-    /**
-     * Creates new form Menu
-     * @param aThis
-     */
     public VistaMenu(ControlPrincipal aThis) {
         initComponents();
         control = aThis;

@@ -7,14 +7,14 @@ import java.awt.event.ActionListener;
  * MostrarConsultaCedula. Ventana que permite mostrar los datos de una persona
  * buscado por cedula.
  */
-public class MostrarReporte extends javax.swing.JFrame {
+public class VistaMostrarReporte extends javax.swing.JFrame {
 
     private ControlPrincipal control;
 
     /**
      * MostrarConsultaCedula. Ventana que permite mostrar los datos de un
      */
-    public MostrarReporte(ControlPrincipal aThis) {
+    public VistaMostrarReporte(ControlPrincipal aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
         this.control = control;

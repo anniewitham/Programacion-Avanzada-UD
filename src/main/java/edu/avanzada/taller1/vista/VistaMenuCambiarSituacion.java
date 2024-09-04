@@ -1,32 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package edu.avanzada.taller1.vista;
 
-import edu.avanzada.taller1.control.ControlPrincipal;
-import java.awt.event.ActionListener;
-import javax.swing.JTextField;
+import edu.avanzada.taller1.control.ControlCambiarSituacion;
 
-/**
- *
- * @author Personal
- */
-public class CambiarSituacion extends javax.swing.JFrame {
+public class VistaMenuCambiarSituacion extends javax.swing.JFrame {
 
-    private ControlPrincipal control;
+    private ControlCambiarSituacion control;
 
-    public CambiarSituacion(ControlPrincipal aThis) {
+    public VistaMenuCambiarSituacion(ControlCambiarSituacion aThis) {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.setLocationRelativeTo(null);
+        control = aThis;
+        setLocationRelativeTo(null);
+        setVisible(true);
+        setResizable(false);
+        setTitle("Cambiar Situación Militar");
     }
-
-
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        GrupoCambio = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         botonSalir = new javax.swing.JButton();
@@ -43,7 +33,6 @@ public class CambiarSituacion extends javax.swing.JFrame {
         casillaRemiso = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(204, 245, 183));
 
@@ -89,8 +78,13 @@ public class CambiarSituacion extends javax.swing.JFrame {
 
         botonVolver.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         botonVolver.setForeground(new java.awt.Color(102, 102, 102));
-        botonVolver.setText("Volver Menu");
+        botonVolver.setText("Volver");
         botonVolver.setBorder(null);
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
 
         botonCambiarSituacion.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         botonCambiarSituacion.setForeground(new java.awt.Color(102, 102, 102));
@@ -102,7 +96,6 @@ public class CambiarSituacion extends javax.swing.JFrame {
             }
         });
 
-        GrupoCambio.add(casillaReservista);
         casillaReservista.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         casillaReservista.setForeground(new java.awt.Color(102, 102, 102));
         casillaReservista.setText("Reservista");
@@ -112,7 +105,6 @@ public class CambiarSituacion extends javax.swing.JFrame {
             }
         });
 
-        GrupoCambio.add(casillasReclutado);
         casillasReclutado.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         casillasReclutado.setForeground(new java.awt.Color(102, 102, 102));
         casillasReclutado.setText("Reclutado");
@@ -122,12 +114,10 @@ public class CambiarSituacion extends javax.swing.JFrame {
             }
         });
 
-        GrupoCambio.add(casillaAplazado);
         casillaAplazado.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         casillaAplazado.setForeground(new java.awt.Color(102, 102, 102));
         casillaAplazado.setText("Aplazado");
 
-        GrupoCambio.add(casillaRemiso);
         casillaRemiso.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         casillaRemiso.setForeground(new java.awt.Color(102, 102, 102));
         casillaRemiso.setText("Remiso");
@@ -201,84 +191,58 @@ public class CambiarSituacion extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 382, 382);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void botonCambiarSituacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCambiarSituacionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonCambiarSituacionActionPerformed
-
-    private void SituacionPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SituacionPersonaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SituacionPersonaActionPerformed
 
     private void NombreReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreReclutaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreReclutaActionPerformed
 
-    private void casillasReclutadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillasReclutadoActionPerformed
+    private void SituacionPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SituacionPersonaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_casillasReclutadoActionPerformed
+    }//GEN-LAST:event_SituacionPersonaActionPerformed
+
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVolverActionPerformed
+
+    private void botonCambiarSituacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCambiarSituacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonCambiarSituacionActionPerformed
 
     private void casillaReservistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillaReservistaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_casillaReservistaActionPerformed
-//------------LISTENER-------------
 
-    /**
-     * addSalirListener. Agrega un listener al boton de salir.
-     */
-    public void addSalirListener(ActionListener listener) {
-        botonSalir.addActionListener(listener);
-    }
-
-    public void addVolverMenuListener(ActionListener listener) {
-        botonVolver.addActionListener(listener);
-    }
-
-    public void addCambiarSituacionListener(ActionListener listener) {
-        botonCambiarSituacion.addActionListener(listener);
-    }
-
-    public String getSeleccionCambioSitacion() {
-        if (casillaReservista.isSelected()) {
-            return "Reservista";
-        } else if (casillasReclutado.isSelected()) {
-            return "Reclutado";
-        } else if (casillaAplazado.isSelected()) {
-            return "Aplazado";
-        } else if (casillaRemiso.isSelected()) {
-            return "Remiso";
-        }
-        return null;
-    }
-
-    public void mostrarNombre(String nombrePersona) {
-        NombreRecluta.setText(nombrePersona);
-    }
-
-    public void mostrarSituacionActual(String situacionActualPersona) {
-        SituacionPersona.setText(situacionActualPersona);
-    }
-
-    public void resetearCampos() {
-        GrupoCambio.clearSelection();
-    }
+    private void casillasReclutadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casillasReclutadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_casillasReclutadoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup GrupoCambio;
-    private javax.swing.JTextField NombreRecluta;
-    private javax.swing.JTextField SituacionPersona;
-    private javax.swing.JButton botonCambiarSituacion;
-    private javax.swing.JButton botonSalir;
-    private javax.swing.JButton botonVolver;
-    private javax.swing.JRadioButton casillaAplazado;
-    private javax.swing.JRadioButton casillaRemiso;
-    private javax.swing.JRadioButton casillaReservista;
-    private javax.swing.JRadioButton casillasReclutado;
+    public javax.swing.JTextField NombreRecluta;
+    public javax.swing.JTextField SituacionPersona;
+    public javax.swing.JButton botonCambiarSituacion;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonVolver;
+    public javax.swing.JRadioButton casillaAplazado;
+    public javax.swing.JRadioButton casillaRemiso;
+    public javax.swing.JRadioButton casillaReservista;
+    public javax.swing.JRadioButton casillasReclutado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel8;

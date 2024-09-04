@@ -1,27 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package edu.avanzada.taller1.vista;
 
-import edu.avanzada.taller1.control.ControlPrincipal;
-import java.awt.event.ActionListener;
+import edu.avanzada.taller1.control.ControlGenerarReporte;
 
-/**
- *
- * @author Personal
- */
-public class ElegirSituacionReporte extends javax.swing.JFrame {
+public class VistaGenerarReporte extends javax.swing.JFrame {
 
-    private ControlPrincipal control;
+    private ControlGenerarReporte control;
 
-    /**
-     * Creates new form InsertarPersona
-     */
-    public ElegirSituacionReporte(ControlPrincipal aThis) {
+    public VistaGenerarReporte(ControlGenerarReporte aThis) {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.control = control;
+        control = aThis;
+        setLocationRelativeTo(null);
+        setVisible(true);
+        setResizable(false);
+        setTitle("Generar un Reporte");
     }
 
 
@@ -35,7 +26,7 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
         botonReporteReservista = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        BotonVolverMenu = new javax.swing.JButton();
+        botonVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -87,13 +78,13 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setText("Eliga el tipo ");
 
-        BotonVolverMenu.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
-        BotonVolverMenu.setForeground(new java.awt.Color(102, 102, 102));
-        BotonVolverMenu.setText("Volver Menu");
-        BotonVolverMenu.setBorder(null);
-        BotonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
+        botonVolver.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        botonVolver.setForeground(new java.awt.Color(102, 102, 102));
+        botonVolver.setText("Volver");
+        botonVolver.setBorder(null);
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonVolverMenuActionPerformed(evt);
+                botonVolverActionPerformed(evt);
             }
         });
 
@@ -119,7 +110,7 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
                         .addGap(86, 86, 86))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(BotonVolverMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -142,7 +133,7 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(botonReporteAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(BotonVolverMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
 
@@ -174,46 +165,17 @@ public class ElegirSituacionReporte extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonReporteReclutadosActionPerformed
 
-    private void BotonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVolverMenuActionPerformed
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BotonVolverMenuActionPerformed
-
-    /**
-     * addSalirListener. Agrega un listener al boton de salir.
-     */
-    public void addSalirListener(ActionListener listener) {
-        botonSalir.addActionListener(listener);
-    }
-     /**
-     * addvolverMenuListener. Agrega un listener al boton de volver menu.
-     */
-    public void addvolverMenuListener(ActionListener listener) {
-        BotonVolverMenu.addActionListener(listener);
-    }
-
-    public void addReporteReclutadosListener(ActionListener listener) {
-        botonReporteReclutados.addActionListener(listener);
-    }
-
-    public void addReporteReservistasListener(ActionListener listener) {
-        botonReporteReservista.addActionListener(listener);
-    }
-
-    public void addReporteAplazadosListener(ActionListener listener) {
-        botonReporteAplazado.addActionListener(listener);
-    }
-
-    public void addReporteRemisosListener(ActionListener listener) {
-        botonReporteRemiso.addActionListener(listener);
-    }
+    }//GEN-LAST:event_botonVolverActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonVolverMenu;
-    private javax.swing.JButton botonReporteAplazado;
-    private javax.swing.JButton botonReporteReclutados;
-    private javax.swing.JButton botonReporteRemiso;
-    private javax.swing.JButton botonReporteReservista;
-    private javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonReporteAplazado;
+    public javax.swing.JButton botonReporteReclutados;
+    public javax.swing.JButton botonReporteRemiso;
+    public javax.swing.JButton botonReporteReservista;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonVolver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

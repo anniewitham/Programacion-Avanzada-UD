@@ -70,7 +70,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="BotonVolverMenu" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="botonVolver" min="-2" pref="130" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -98,7 +98,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="botonReporteAplazado" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                  <Component id="BotonVolverMenu" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="botonVolver" min="-2" pref="36" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -118,6 +118,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botonReporteReclutados">
           <Properties>
@@ -135,6 +138,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonReporteReclutadosActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botonReporteAplazado">
           <Properties>
@@ -152,6 +158,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonReporteAplazadoActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botonReporteReservista">
           <Properties>
@@ -169,6 +178,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonReporteReservistaActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="botonSalir">
           <Properties>
@@ -186,6 +198,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
@@ -198,7 +213,7 @@
             <Property name="text" type="java.lang.String" value="Eliga el tipo "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="BotonVolverMenu">
+        <Component class="javax.swing.JButton" name="botonVolver">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lucida Sans" size="12" style="1"/>
@@ -206,14 +221,17 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Volver Menu"/>
+            <Property name="text" type="java.lang.String" value="Volver"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonVolverMenuActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonVolverActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
