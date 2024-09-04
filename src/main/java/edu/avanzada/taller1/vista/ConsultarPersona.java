@@ -1,39 +1,32 @@
 package edu.avanzada.taller1.vista;
 
-import edu.avanzada.taller1.control.ControlPrincipal;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JTextField;
+import edu.avanzada.taller1.control.ControlConsultarPersona;
 
 
 public class ConsultarPersona extends javax.swing.JFrame {
 
-    private ControlPrincipal control;
+    private ControlConsultarPersona control;
  
 
     
-    public ConsultarPersona(ControlPrincipal aThis) {
+    public ConsultarPersona(ControlConsultarPersona aThis) {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.control = control;
+        control = aThis;
+        setLocationRelativeTo(null);
+        setVisible(true);
+        setResizable(false);
     }
-
-
-    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         botonConsultarCedula = new javax.swing.JButton();
-        BotonVolverMenu = new javax.swing.JButton();
+        botonVolverMenu = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         jTextFieldConsultarCedula = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(204, 245, 183));
         jPanel3.setLayout(null);
@@ -56,20 +49,17 @@ public class ConsultarPersona extends javax.swing.JFrame {
         jPanel3.add(botonConsultarCedula);
         botonConsultarCedula.setBounds(220, 150, 170, 30);
 
-        BotonVolverMenu.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
-        BotonVolverMenu.setForeground(new java.awt.Color(102, 102, 102));
-        BotonVolverMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver.png"))); // NOI18N
-        BotonVolverMenu.setText("Volver Menu");
-        BotonVolverMenu.setBorder(null);
-        BotonVolverMenu.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver 32.png"))); // NOI18N
-        BotonVolverMenu.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller1/vista/volver 32.png"))); // NOI18N
-        BotonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
+        botonVolverMenu.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
+        botonVolverMenu.setForeground(new java.awt.Color(102, 102, 102));
+        botonVolverMenu.setText("Volver");
+        botonVolverMenu.setBorder(null);
+        botonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonVolverMenuActionPerformed(evt);
+                botonVolverMenuActionPerformed(evt);
             }
         });
-        jPanel3.add(BotonVolverMenu);
-        BotonVolverMenu.setBounds(40, 150, 130, 30);
+        jPanel3.add(botonVolverMenu);
+        botonVolverMenu.setBounds(40, 150, 130, 30);
 
         botonSalir.setBackground(new java.awt.Color(204, 255, 153));
         botonSalir.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
@@ -99,55 +89,16 @@ public class ConsultarPersona extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonConsultarCedulaActionPerformed
 
-    private void BotonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVolverMenuActionPerformed
+    private void botonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverMenuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BotonVolverMenuActionPerformed
-//------------- LISTENER----------
+    }//GEN-LAST:event_botonVolverMenuActionPerformed
 
-    /**
-     * Agrega un listener al boton de salir.
-     *
-     * @param listener
-     */
-    public void addSalirListener(ActionListener listener) {
-        botonSalir.addActionListener(listener);
-    }
-
-    /**
-     * addConsultarPersonaListener. Agrega un listener al boton de consultar
-     * citas.
-     */
-    public void addConsultarPersonaListener(ActionListener listener) {
-        botonConsultarCedula.addActionListener(listener);
-    }
-
-    /**
-     * addvolverMenuListener. Agrega un listener al boton de volver menu.
-     */
-    public void addvolverMenuListener(ActionListener listener) {
-        BotonVolverMenu.addActionListener(listener);
-    }
-
-    //--------
-    /**
-     * cargarConsultaCedula. Retorna el campo de texto de la cedula.
-     */
-    public JTextField cargarConsultaCedula() {
-        return jTextFieldConsultarCedula;
-    }
-
-    /**
-     * resetearCampos. Resetea los campos de texto.
-     */
-    public void resetearCampos() {
-        jTextFieldConsultarCedula.setText("");
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonVolverMenu;
-    private javax.swing.JButton botonConsultarCedula;
-    private javax.swing.JButton botonSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextFieldConsultarCedula;
+    public javax.swing.JButton botonConsultarCedula;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonVolverMenu;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JTextField jTextFieldConsultarCedula;
     // End of variables declaration//GEN-END:variables
 }

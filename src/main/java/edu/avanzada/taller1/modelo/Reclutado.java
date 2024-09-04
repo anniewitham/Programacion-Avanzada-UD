@@ -19,4 +19,12 @@ public class Reclutado extends Persona {
     public void setCodigoReclutamiento(String codigoReclutamiento) {
         this.codigoReclutamiento = codigoReclutamiento;
     }
+    
+    public String mostrarDatos(){
+        return "<p>RECLUTA"
+                + "<p>Nombre: " + super.getNombre() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
+                + "Apellido: " + super.getApellido() + "<p> "
+                + "<p>Cedula: " + super.getCedula() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
+                + "Codigo de Reclutamiento: " + codigoReclutamiento + "<p>";
+    }
 }

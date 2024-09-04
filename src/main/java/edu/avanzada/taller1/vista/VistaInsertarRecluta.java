@@ -4,25 +4,32 @@
  */
 package edu.avanzada.taller1.vista;
 
-import edu.avanzada.taller1.control.ControlPrincipal;
-import java.awt.event.ActionListener;
-import javax.swing.JTextField;
+import edu.avanzada.taller1.control.ControlInsertarPersona;
 
 /**
  *
  * @author Personal
  */
-public class InsertarRecluta extends javax.swing.JFrame {
+public class VistaInsertarRecluta extends javax.swing.JFrame {
 
-    private ControlPrincipal control;
+    private ControlInsertarPersona control;
 
     /**
      * Creates new form InsertarRecluta
      */
-    public InsertarRecluta(ControlPrincipal aThis) {
+    public VistaInsertarRecluta(ControlInsertarPersona aThis) {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.setLocationRelativeTo(null);
+        this.control = aThis;
+        setVisible(true);
+        setResizable(false);
+        setLocationRelativeTo(null);
+    }
+    
+    public void limpiarRecluta(){
+        NombreRecluta.setText("");
+        ApellidoRecluta.setText("");
+        CedulaRecluta.setText("");
+        CodigoReclutamientoRecluta.setText("");
     }
 
 
@@ -35,7 +42,7 @@ public class InsertarRecluta extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         NombreRecluta = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        CodigoReclutamienttoRecluta = new javax.swing.JTextField();
+        CodigoReclutamientoRecluta = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         CedulaRecluta = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
@@ -44,7 +51,6 @@ public class InsertarRecluta extends javax.swing.JFrame {
         botonInsertarRecluta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(204, 245, 183));
 
@@ -75,12 +81,12 @@ public class InsertarRecluta extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(102, 102, 102));
         jLabel9.setText("Apellido:");
 
-        CodigoReclutamienttoRecluta.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        CodigoReclutamienttoRecluta.setForeground(new java.awt.Color(102, 102, 102));
-        CodigoReclutamienttoRecluta.setBorder(null);
-        CodigoReclutamienttoRecluta.addActionListener(new java.awt.event.ActionListener() {
+        CodigoReclutamientoRecluta.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        CodigoReclutamientoRecluta.setForeground(new java.awt.Color(102, 102, 102));
+        CodigoReclutamientoRecluta.setBorder(null);
+        CodigoReclutamientoRecluta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CodigoReclutamienttoReclutaActionPerformed(evt);
+                CodigoReclutamientoReclutaActionPerformed(evt);
             }
         });
 
@@ -112,8 +118,13 @@ public class InsertarRecluta extends javax.swing.JFrame {
 
         botonVolver.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         botonVolver.setForeground(new java.awt.Color(102, 102, 102));
-        botonVolver.setText("Volver Menu");
+        botonVolver.setText("Volver");
         botonVolver.setBorder(null);
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
 
         botonInsertarRecluta.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
         botonInsertarRecluta.setForeground(new java.awt.Color(102, 102, 102));
@@ -130,40 +141,43 @@ public class InsertarRecluta extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(298, 298, 298)
-                .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(NombreRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(ApellidoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(CedulaRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(CodigoReclutamienttoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(298, 298, 298)
+                        .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(NombreRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(ApellidoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(CedulaRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(CodigoReclutamientoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)
+                        .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,95 +201,68 @@ public class InsertarRecluta extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(jLabel10)
                 .addGap(5, 5, 5)
-                .addComponent(CodigoReclutamienttoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CodigoReclutamientoRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(botonInsertarRecluta, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 382, 382);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CodigoReclutamienttoReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoReclutamienttoReclutaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CodigoReclutamienttoReclutaActionPerformed
 
     private void NombreReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreReclutaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreReclutaActionPerformed
 
+    private void CodigoReclutamientoReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoReclutamientoReclutaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CodigoReclutamientoReclutaActionPerformed
+
+    private void CedulaReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaReclutaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CedulaReclutaActionPerformed
+
     private void ApellidoReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoReclutaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ApellidoReclutaActionPerformed
+
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVolverActionPerformed
 
     private void botonInsertarReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReclutaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonInsertarReclutaActionPerformed
 
-    private void CedulaReclutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulaReclutaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CedulaReclutaActionPerformed
-//------------LISTENER-------------
-
-    /**
-     * addSalirListener. Agrega un listener al boton de salir.
-     */
-    public void addSalirListener(ActionListener listener) {
-        botonSalir.addActionListener(listener);
-    }
-
-    public void addVolverMenuListener(ActionListener listener) {
-        botonVolver.addActionListener(listener);
-    }
-
-    public void addInsertarReclutaListener(ActionListener listener) {
-        botonInsertarRecluta.addActionListener(listener);
-    }
-
-//-------------CARGAR----------------
-    public JTextField cargarNombreRecluta() {
-        return NombreRecluta;
-    }
-
-    public JTextField cargarApellidoRecluta() {
-        return ApellidoRecluta;
-    }
-
-    public JTextField cargarCedulaRecluta() {
-        return CedulaRecluta;
-    }
-
-    public JTextField cargarCodigoReclutamiento() {
-        return CodigoReclutamienttoRecluta;
-    }
-
-//--------------RSETEAR CAMPOS-----------
-    public void resetearCamposRecluta() {
-        NombreRecluta.setText("");
-        ApellidoRecluta.setText("");
-        CedulaRecluta.setText("");
-        CodigoReclutamienttoRecluta.setText("");
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ApellidoRecluta;
-    private javax.swing.JTextField CedulaRecluta;
-    private javax.swing.JTextField CodigoReclutamienttoRecluta;
-    private javax.swing.JTextField NombreRecluta;
-    private javax.swing.JButton botonInsertarRecluta;
-    private javax.swing.JButton botonSalir;
-    private javax.swing.JButton botonVolver;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
+    public javax.swing.JTextField ApellidoRecluta;
+    public javax.swing.JTextField CedulaRecluta;
+    public javax.swing.JTextField CodigoReclutamientoRecluta;
+    public javax.swing.JTextField NombreRecluta;
+    public javax.swing.JButton botonInsertarRecluta;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonVolver;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel10;
+    public javax.swing.JLabel jLabel11;
+    public javax.swing.JLabel jLabel8;
+    public javax.swing.JLabel jLabel9;
+    public javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

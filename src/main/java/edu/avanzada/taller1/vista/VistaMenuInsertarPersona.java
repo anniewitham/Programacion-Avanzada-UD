@@ -4,24 +4,26 @@
  */
 package edu.avanzada.taller1.vista;
 
-import edu.avanzada.taller1.control.ControlPrincipal;
-import java.awt.event.ActionListener;
+import edu.avanzada.taller1.control.ControlInsertarPersona;
 
 /**
  *
  * @author Personal
  */
-public class InsertarPersona extends javax.swing.JFrame {
+public class VistaMenuInsertarPersona extends javax.swing.JFrame {
 
-    private ControlPrincipal control;
+    private ControlInsertarPersona control;
 
     /**
      * Creates new form InsertarPersona
      */
-    public InsertarPersona(ControlPrincipal aThis) {
+    public VistaMenuInsertarPersona(ControlInsertarPersona aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.control = control;
+        this.control = aThis;
+        setVisible(true);
+        setResizable(false);
+        setLocationRelativeTo(null);
     }
 
 
@@ -30,14 +32,14 @@ public class InsertarPersona extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         botonInsertarRemiso = new javax.swing.JButton();
-        botonInsertarReclutado = new javax.swing.JButton();
         botonInsertarAplazado = new javax.swing.JButton();
         botonInsertarReservista = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        botonVolver = new javax.swing.JButton();
+        botonInsertarReclutado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 245, 183));
 
@@ -45,16 +47,6 @@ public class InsertarPersona extends javax.swing.JFrame {
         botonInsertarRemiso.setForeground(new java.awt.Color(102, 102, 102));
         botonInsertarRemiso.setText("Remiso");
         botonInsertarRemiso.setBorder(null);
-
-        botonInsertarReclutado.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        botonInsertarReclutado.setForeground(new java.awt.Color(102, 102, 102));
-        botonInsertarReclutado.setText("Reclutado");
-        botonInsertarReclutado.setBorder(null);
-        botonInsertarReclutado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonInsertarReclutadoActionPerformed(evt);
-            }
-        });
 
         botonInsertarAplazado.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
         botonInsertarAplazado.setForeground(new java.awt.Color(102, 102, 102));
@@ -86,6 +78,26 @@ public class InsertarPersona extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setText("Eliga el tipo ");
 
+        botonVolver.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        botonVolver.setForeground(new java.awt.Color(102, 102, 102));
+        botonVolver.setText("Volver");
+        botonVolver.setBorder(null);
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
+
+        botonInsertarReclutado.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        botonInsertarReclutado.setForeground(new java.awt.Color(102, 102, 102));
+        botonInsertarReclutado.setText("Reclutado");
+        botonInsertarReclutado.setBorder(null);
+        botonInsertarReclutado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonInsertarReclutadoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -101,11 +113,15 @@ public class InsertarPersona extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonInsertarReclutado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(botonInsertarReservista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(botonInsertarAplazado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(botonInsertarRemiso, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
+                            .addComponent(botonInsertarRemiso, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(botonInsertarReclutado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(86, 86, 86))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,19 +130,21 @@ public class InsertarPersona extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap(29, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonInsertarReclutado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
-                .addComponent(botonInsertarReclutado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(botonInsertarReservista, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botonInsertarRemiso, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botonInsertarAplazado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+                .addGap(19, 19, 19)
+                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,40 +171,22 @@ public class InsertarPersona extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonInsertarReservistaActionPerformed
 
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVolverActionPerformed
+
     private void botonInsertarReclutadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarReclutadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonInsertarReclutadoActionPerformed
 
-    /**
-     * addSalirListener. Agrega un listener al boton de salir.
-     */
-    public void addSalirListener(ActionListener listener) {
-        botonSalir.addActionListener(listener);
-    }
-
-    public void addInsertarReclutadoListener(ActionListener listener) {
-        botonInsertarReclutado.addActionListener(listener);
-    }
-
-    public void addInsertarReservistaListener(ActionListener listener) {
-        botonInsertarReservista.addActionListener(listener);
-    }
-
-    public void addInsertarAplazadoListener(ActionListener listener) {
-        botonInsertarAplazado.addActionListener(listener);
-    }
-
-    public void addInsertarRemisoListener(ActionListener listener) {
-        botonInsertarRemiso.addActionListener(listener);
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonInsertarAplazado;
-    private javax.swing.JButton botonInsertarReclutado;
-    private javax.swing.JButton botonInsertarRemiso;
-    private javax.swing.JButton botonInsertarReservista;
-    private javax.swing.JButton botonSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    public javax.swing.JButton botonInsertarAplazado;
+    public javax.swing.JButton botonInsertarReclutado;
+    public javax.swing.JButton botonInsertarRemiso;
+    public javax.swing.JButton botonInsertarReservista;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonVolver;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

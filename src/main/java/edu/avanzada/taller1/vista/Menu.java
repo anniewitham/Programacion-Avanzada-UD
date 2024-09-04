@@ -2,7 +2,6 @@
 package edu.avanzada.taller1.vista;
 
 import edu.avanzada.taller1.control.ControlPrincipal;
-import java.awt.event.ActionListener;
 
 
 public class Menu extends javax.swing.JFrame {
@@ -12,32 +11,16 @@ public class Menu extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu
+     * @param aThis
      */
     public Menu(ControlPrincipal aThis) {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.control = control;
-    }
-
-    /**
-     * addSalirListener. Agrega un listener al boton de salir.
-     */
-    public void addSalirListener(ActionListener listener) {
-        botonSalir.addActionListener(listener);
+        this.control = aThis;
+        setVisible(true);
+        setResizable(false);
     }
     
-    public void addInsertarPersonaListener(ActionListener listener) {
-        botonInsertarPersona.addActionListener(listener);
-    }
-    public void addConsultarPersonaListener(ActionListener listener) {
-        botonConsultarPersona.addActionListener(listener);
-    }
-    public void addCambiarSituacionMilitarListener(ActionListener listener) {
-        botonCambiarSituacion.addActionListener(listener);
-    }
-    public void addReporteEstadoListener(ActionListener listener) {
-        botonReporte.addActionListener(listener);
-    }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -45,7 +28,7 @@ public class Menu extends javax.swing.JFrame {
         botonSalir = new javax.swing.JButton();
         botonInsertarPersona = new javax.swing.JButton();
         botonConsultarPersona = new javax.swing.JButton();
-        botonCambiarSituacion = new javax.swing.JButton();
+        botonSituacionMilitar = new javax.swing.JButton();
         botonReporte = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -64,16 +47,21 @@ public class Menu extends javax.swing.JFrame {
         botonInsertarPersona.setForeground(new java.awt.Color(102, 102, 102));
         botonInsertarPersona.setText("Insertar Persona");
         botonInsertarPersona.setBorder(null);
+        botonInsertarPersona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonInsertarPersonaActionPerformed(evt);
+            }
+        });
 
         botonConsultarPersona.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
         botonConsultarPersona.setForeground(new java.awt.Color(102, 102, 102));
         botonConsultarPersona.setText("Consultar Persona");
         botonConsultarPersona.setBorder(null);
 
-        botonCambiarSituacion.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
-        botonCambiarSituacion.setForeground(new java.awt.Color(102, 102, 102));
-        botonCambiarSituacion.setText("Cambiar situacion militar");
-        botonCambiarSituacion.setBorder(null);
+        botonSituacionMilitar.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
+        botonSituacionMilitar.setForeground(new java.awt.Color(102, 102, 102));
+        botonSituacionMilitar.setText("Cambiar situacion militar");
+        botonSituacionMilitar.setBorder(null);
 
         botonReporte.setFont(new java.awt.Font("Lucida Sans", 1, 14)); // NOI18N
         botonReporte.setForeground(new java.awt.Color(102, 102, 102));
@@ -92,7 +80,7 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonCambiarSituacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonSituacionMilitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botonConsultarPersona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botonInsertarPersona, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botonReporte, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
@@ -119,7 +107,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(botonConsultarPersona, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(botonCambiarSituacion, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonSituacionMilitar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botonReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(62, Short.MAX_VALUE))
@@ -139,15 +127,19 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void botonInsertarPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInsertarPersonaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonInsertarPersonaActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonCambiarSituacion;
-    private javax.swing.JButton botonConsultarPersona;
-    private javax.swing.JButton botonInsertarPersona;
-    private javax.swing.JButton botonReporte;
-    private javax.swing.JButton botonSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    public javax.swing.JButton botonConsultarPersona;
+    public javax.swing.JButton botonInsertarPersona;
+    public javax.swing.JButton botonReporte;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JButton botonSituacionMilitar;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
