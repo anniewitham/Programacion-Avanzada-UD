@@ -2,23 +2,17 @@ package edu.avanzada.taller1.vista;
 
 import edu.avanzada.taller1.control.ControlConsultarPersona;
 
-/**
- * MostrarConsultaCedula. Ventana que permite mostrar los datos de una persona
- * buscado por cedula.
- */
-public class MostrarConsultaCedula extends javax.swing.JFrame {
+public class VistaMostrarConsulta extends javax.swing.JFrame {
 
     private ControlConsultarPersona control;
-
-    /**
-     * MostrarConsultaCedula. Ventana que permite mostrar los datos de un
-     */
-    public MostrarConsultaCedula(ControlConsultarPersona aThis) {
+    
+    public VistaMostrarConsulta(ControlConsultarPersona aThis) {
         initComponents();
-        this.control = aThis;
+        control = aThis;
         setLocationRelativeTo(null);
         setVisible(true);
         setResizable(false);
+        setTitle("Consulta Encontrada");
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

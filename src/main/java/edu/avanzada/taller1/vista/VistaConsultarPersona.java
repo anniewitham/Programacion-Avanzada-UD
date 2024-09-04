@@ -2,19 +2,17 @@ package edu.avanzada.taller1.vista;
 
 import edu.avanzada.taller1.control.ControlConsultarPersona;
 
-
-public class ConsultarPersona extends javax.swing.JFrame {
+public class VistaConsultarPersona extends javax.swing.JFrame {
 
     private ControlConsultarPersona control;
- 
-
     
-    public ConsultarPersona(ControlConsultarPersona aThis) {
+    public VistaConsultarPersona(ControlConsultarPersona aThis) {
         initComponents();
         control = aThis;
         setLocationRelativeTo(null);
         setVisible(true);
         setResizable(false);
+        setTitle("Consultar una Persona");
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

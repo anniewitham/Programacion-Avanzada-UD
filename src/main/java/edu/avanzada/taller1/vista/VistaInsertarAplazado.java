@@ -12,7 +12,7 @@ public class VistaInsertarAplazado extends javax.swing.JFrame {
         setVisible(true);
         setResizable(false);
         setLocationRelativeTo(null);
-        setTitle("Insertar una Persona");
+        setTitle("Insertar un Aplazado");
     }
 
 

@@ -19,5 +19,13 @@ public class Reservista extends Persona {
     public void setLibreta(String libreta) {
         this.libreta = libreta;
     }
+    
+    public String mostrarDatos(){
+        return "<p>RESERVISTA"
+                + "<p>Nombre: " + super.getNombre() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
+                + "Apellido: " + super.getApellido() + "<p> "
+                + "<p>Cedula: " + super.getCedula() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
+                + "<p>Libreta: " + libreta;
+    }
 }
 

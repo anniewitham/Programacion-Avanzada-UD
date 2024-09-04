@@ -15,7 +15,7 @@ public class ControlPrincipal implements ActionListener {
     private ControlInsertarPersona ControlInsertar;
     private ControlConsultarPersona ControlConsultar;
     private VistaMenu menu;
-    protected ArrayList<Persona> personas;
+    public ArrayList<Persona> personas;
     
     public ControlPrincipal() {
         ControlInsertar = new ControlInsertarPersona(this);
