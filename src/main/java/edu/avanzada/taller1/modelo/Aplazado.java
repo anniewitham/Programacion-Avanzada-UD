@@ -2,8 +2,8 @@ package edu.avanzada.taller1.modelo;
 
 import java.util.Date;
 
-//Clase hija de Remiso encargada de Aplazado
-public class Aplazado extends Remiso{
+//Clase hija de Persona encargada de Aplazado
+public class Aplazado extends Persona{
     //Declaración de atributos de Aplazado
     private Date fechaAplazamiento;
 

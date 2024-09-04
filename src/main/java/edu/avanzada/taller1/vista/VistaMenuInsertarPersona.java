@@ -19,11 +19,11 @@ public class VistaMenuInsertarPersona extends javax.swing.JFrame {
      */
     public VistaMenuInsertarPersona(ControlInsertarPersona aThis) {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.control = aThis;
+        control = aThis;
         setVisible(true);
         setResizable(false);
         setLocationRelativeTo(null);
+        setTitle("Insertar una Persona");
     }
 
 

@@ -1,7 +1,7 @@
 package edu.avanzada.taller1.control;
 
 import edu.avanzada.taller1.modelo.Persona;
-import edu.avanzada.taller1.vista.Menu;
+import edu.avanzada.taller1.vista.VistaMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class ControlPrincipal implements ActionListener {
     private ControlInsertarPersona ControlInsertar;
     private ControlConsultarPersona ControlConsultar;
-    private Menu menu;
+    private VistaMenu menu;
     protected ArrayList<Persona> personas;
     
     public ControlPrincipal() {
@@ -26,10 +26,12 @@ public class ControlPrincipal implements ActionListener {
         crearVista();
     }
     
-    //Este metodo instancia la vista del Menú principal
+    /*
+        Este metodo instancia la vista del Menú principal
+    */
     public void crearVista(){
         //Agregar funcionalidad a los botones de las interfaces
-        menu = new Menu(this);
+        menu = new VistaMenu(this);
         menu.botonSituacionMilitar.addActionListener(this);
         menu.botonConsultarPersona.addActionListener(this);
         menu.botonInsertarPersona.addActionListener(this);

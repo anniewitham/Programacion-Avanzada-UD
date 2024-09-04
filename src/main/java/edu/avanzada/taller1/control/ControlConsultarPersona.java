@@ -23,7 +23,6 @@ public class ControlConsultarPersona implements ActionListener{
         vistaConsultarPersona.botonSalir.addActionListener(this);
         vistaConsultarPersona.botonVolverMenu.addActionListener(this);
         c = 1;
-        System.out.println("111");
     }
     
     public void crearVistaMostrarConsulta(String datos){

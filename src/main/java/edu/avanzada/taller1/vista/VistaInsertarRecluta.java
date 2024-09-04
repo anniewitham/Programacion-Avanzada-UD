@@ -23,15 +23,8 @@ public class VistaInsertarRecluta extends javax.swing.JFrame {
         setVisible(true);
         setResizable(false);
         setLocationRelativeTo(null);
+        setTitle("Insertar un Reclutado");
     }
-    
-    public void limpiarRecluta(){
-        NombreRecluta.setText("");
-        ApellidoRecluta.setText("");
-        CedulaRecluta.setText("");
-        CodigoReclutamientoRecluta.setText("");
-    }
-
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
