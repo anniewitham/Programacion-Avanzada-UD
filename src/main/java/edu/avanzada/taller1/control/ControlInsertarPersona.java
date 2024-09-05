@@ -14,12 +14,12 @@ import java.awt.event.ActionListener;
 
 public class ControlInsertarPersona implements ActionListener{
 
-    private ControlPrincipal controlPrincipal;
-    private VistaMenuInsertarPersona vistaInsertarPersona;
-    private VistaInsertarRecluta vistaInsertarRecluta;
-    private VistaInsertarReservista vistaInsertarReservista;
-    private VistaInsertarRemiso vistaInsertarRemiso;
-    private VistaInsertarAplazado vistaInsertarAplazado;
+    protected ControlPrincipal controlPrincipal;
+    protected  VistaMenuInsertarPersona vistaInsertarPersona;
+    protected VistaInsertarRecluta vistaInsertarRecluta;
+    protected VistaInsertarReservista vistaInsertarReservista;
+    protected VistaInsertarRemiso vistaInsertarRemiso;
+    protected VistaInsertarAplazado vistaInsertarAplazado;
     private int c = 0;
     
     public ControlInsertarPersona(ControlPrincipal controlPrincipal){

@@ -1,4 +1,4 @@
-package edu.avanzada.taller1.control;
+Aaaapackage edu.avanzada.taller1.control;
 
 import edu.avanzada.taller1.modelo.Aplazado;
 import edu.avanzada.taller1.modelo.Persona;
@@ -9,6 +9,8 @@ import edu.avanzada.taller1.vista.VistaGenerarReporte;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+
+
 
 public class ControlGenerarReporte implements ActionListener {
     public ArrayList<Persona> reporte;

@@ -11,9 +11,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 public class ControlConsultarPersona implements ActionListener{
-    private ControlPrincipal controlPrincipal;
-    private VistaConsultarPersona vistaConsultarPersona;
-    private VistaMostrarConsulta mostrarConsulta;
+    protected ControlPrincipal controlPrincipal;
+    protected VistaConsultarPersona vistaConsultarPersona;
+    protected VistaMostrarConsulta mostrarConsulta;
     private int c = 0;
     private boolean personaNoEncontrada = false;
 
