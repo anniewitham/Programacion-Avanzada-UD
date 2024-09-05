@@ -21,10 +21,12 @@ public class Reclutado extends Persona {
     }
     
     public String mostrarDatos(){
-        return "<p>RECLUTA"
-                + "<p>Nombre: " + super.getNombre() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
-                + "Apellido: " + super.getApellido() + "<p> "
-                + "<p>Cedula: " + super.getCedula() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
-                + "<p>Codigo de Reclutamiento: " + codigoReclutamiento;
+        return "<html>" +
+            "<h2>RECLUTA</h2>" +
+            "<p><strong>Nombre:</strong> " + super.getNombre() + "&emsp;" +
+            "<strong>Apellido:</strong> " + super.getApellido() + "</p>" +
+            "<p><strong>Cédula:</strong> " + super.getCedula() + "&emsp;" +
+            "<strong>Código de Reclutamiento:</strong> " + codigoReclutamiento + "</p>" +
+            "</html>";
     }
 }

@@ -9,6 +9,7 @@ import edu.avanzada.taller1.vista.VistaGenerarReporte;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class ControlGenerarReporte implements ActionListener {
     public ArrayList<Persona> reporte;
@@ -18,6 +19,7 @@ public class ControlGenerarReporte implements ActionListener {
 
     public ControlGenerarReporte(ControlPrincipal controlPrincipal) {
         this.controlPrincipal = controlPrincipal;
+        reporte = new ArrayList<>();
     }
     
     public void crearVistaGenerarReporte(){
@@ -32,31 +34,29 @@ public class ControlGenerarReporte implements ActionListener {
     }
     
     public void generarReporte(String situacion){
-        Persona persona;
-        for(int i=0;i<controlPrincipal.personas.size();i++){
-            if(cedula.equals(controlPrincipal.personas.get(i).getCedula())){
-                persona = controlPrincipal.personas.get(i);
-                String caso = persona.getClass().getName();
-                switch(caso){
-                    case "edu.avanzada.taller1.modelo.Reclutado":
-                        Reclutado recluta = (Reclutado) controlPrincipal.personas.get(i);
-                        crearVistaMostrarConsulta(recluta.mostrarDatos());
-                        break;
-                    case "edu.avanzada.taller1.modelo.Reservista":
-                        Reservista reservista = (Reservista) controlPrincipal.personas.get(i);
-                        crearVistaMostrarConsulta(reservista.mostrarDatos());
-                        break;
-                    case "edu.avanzada.taller1.modelo.Remiso":
-                        Remiso remiso = (Remiso) controlPrincipal.personas.get(i);
-                        crearVistaMostrarConsulta(remiso.mostrarDatos());
-                        break;
-                    case "edu.avanzada.taller1.modelo.Aplazado":
-                        Aplazado aplazado = (Aplazado) controlPrincipal.personas.get(i);
-                        crearVistaMostrarConsulta(aplazado.mostrarDatos());
-                        break;
-                }
+        reporte.clear();
+        
+        for (Persona persona : controlPrincipal.personas) {
+            if (situacion.equals(persona.getClass().getName())) {
+                reporte.add(persona);
             }
         }
+
+        StringBuilder datos = new StringBuilder("<html><body>");
+
+        for (Persona persona : reporte) {
+            if (persona instanceof Reclutado) {
+                datos.append(((Reclutado) persona).mostrarDatos());
+            } else if (persona instanceof Aplazado) {
+                datos.append(((Aplazado) persona).mostrarDatos());
+            } else if (persona instanceof Remiso) {
+                datos.append(((Remiso) persona).mostrarDatos());
+            } else if (persona instanceof Reservista) {
+                datos.append(((Reservista) persona).mostrarDatos());
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, datos);
     }
 
     @Override
@@ -67,18 +67,21 @@ public class ControlGenerarReporte implements ActionListener {
         if ("Reclutados".equals(e.getActionCommand())) {
             generarReporte("edu.avanzada.taller1.modelo.Reclutado");
         }
-        if ("Salir".equals(e.getActionCommand())) {
-            System.exit(0);
+        if ("Reservistas".equals(e.getActionCommand())) {
+            generarReporte("edu.avanzada.taller1.modelo.Reservista");
         }
-        if ("Salir".equals(e.getActionCommand())) {
-            System.exit(0);
+        if ("Remisos".equals(e.getActionCommand())) {
+            generarReporte("edu.avanzada.taller1.modelo.Remiso");
+        }
+        if ("Aplazados".equals(e.getActionCommand())) {
+            generarReporte("edu.avanzada.taller1.modelo.Aplazado");
         }
         if ("Volver".equals(e.getActionCommand())) {
             switch(c){
-                case 1:
+                case 1 -> {
                     vistaGenerarReporte.dispose();
                     controlPrincipal.crearVista();
-                    break;
+                }
             }
         }
     }

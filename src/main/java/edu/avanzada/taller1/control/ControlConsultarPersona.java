@@ -45,26 +45,26 @@ public class ControlConsultarPersona implements ActionListener{
                 persona = controlPrincipal.personas.get(i);
                 String caso = persona.getClass().getName();
                 switch(caso){
-                    case "edu.avanzada.taller1.modelo.Reclutado":
+                    case "edu.avanzada.taller1.modelo.Reclutado" -> {
                         Reclutado recluta = (Reclutado) controlPrincipal.personas.get(i);
                         crearVistaMostrarConsulta(recluta.mostrarDatos());
                         personaNoEncontrada = false;
-                        break;
-                    case "edu.avanzada.taller1.modelo.Reservista":
+                    }
+                    case "edu.avanzada.taller1.modelo.Reservista" -> {
                         Reservista reservista = (Reservista) controlPrincipal.personas.get(i);
                         crearVistaMostrarConsulta(reservista.mostrarDatos());
                         personaNoEncontrada = false;
-                        break;
-                    case "edu.avanzada.taller1.modelo.Remiso":
+                    }
+                    case "edu.avanzada.taller1.modelo.Remiso" -> {
                         Remiso remiso = (Remiso) controlPrincipal.personas.get(i);
                         crearVistaMostrarConsulta(remiso.mostrarDatos());
                         personaNoEncontrada = false;
-                        break;
-                    case "edu.avanzada.taller1.modelo.Aplazado":
+                    }
+                    case "edu.avanzada.taller1.modelo.Aplazado" -> {
                         Aplazado aplazado = (Aplazado) controlPrincipal.personas.get(i);
                         crearVistaMostrarConsulta(aplazado.mostrarDatos());
                         personaNoEncontrada = false;
-                        break;
+                    }
                 }
             }
         }

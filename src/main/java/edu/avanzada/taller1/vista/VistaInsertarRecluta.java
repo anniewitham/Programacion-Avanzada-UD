@@ -1,29 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package edu.avanzada.taller1.vista;
 
+import edu.avanzada.taller1.control.ControlCambiarSituacion;
 import edu.avanzada.taller1.control.ControlInsertarPersona;
 
-/**
- *
- * @author Personal
- */
 public class VistaInsertarRecluta extends javax.swing.JFrame {
 
-    private ControlInsertarPersona control;
-
-    /**
-     * Creates new form InsertarRecluta
-     */
+    private ControlInsertarPersona controlInsertar;
+    private ControlCambiarSituacion controlCambiar;
+    
     public VistaInsertarRecluta(ControlInsertarPersona aThis) {
         initComponents();
-        this.control = aThis;
+        controlInsertar = aThis;
         setVisible(true);
         setResizable(false);
         setLocationRelativeTo(null);
         setTitle("Insertar un Reclutado");
+    }
+    
+    public VistaInsertarRecluta(ControlCambiarSituacion aThis) {
+        initComponents();
+        controlCambiar = aThis;
+        setVisible(true);
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setTitle("Insertar un Reclutado");
+        NombreRecluta.setEditable(false);
+        ApellidoRecluta.setEditable(false);
+        CedulaRecluta.setEditable(false);
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

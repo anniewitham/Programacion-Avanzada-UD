@@ -21,11 +21,13 @@ public class Reservista extends Persona {
     }
     
     public String mostrarDatos(){
-        return "<p>RESERVISTA"
-                + "<p>Nombre: " + super.getNombre() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
-                + "Apellido: " + super.getApellido() + "<p> "
-                + "<p>Cedula: " + super.getCedula() + "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
-                + "<p>Libreta: " + libreta;
+        return "<html>" +
+            "<h2>RESERVISTA</h2>" +
+            "<p><strong>Nombre:</strong> " + super.getNombre() + "&emsp;" +
+            "<strong>Apellido:</strong> " + super.getApellido() + "</p>" +
+            "<p><strong>Cédula:</strong> " + super.getCedula() + "&emsp;" +
+            "<strong>Libreta: " + libreta + "</p>" +
+            "</html>";
     }
 }
 

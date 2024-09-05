@@ -135,26 +135,26 @@ public class ControlInsertarPersona implements ActionListener{
         }
         if ("Volver".equals(e.getActionCommand())) {
             switch (c) {
-                case 1:
+                case 1 -> {
                     vistaInsertarPersona.dispose();
                     controlPrincipal.crearVista();
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     vistaInsertarRecluta.dispose();
                     crearVistaInsertarPersona();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     vistaInsertarReservista.dispose();
                     crearVistaInsertarPersona();
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     vistaInsertarRemiso.dispose();
                     crearVistaInsertarPersona();
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     vistaInsertarAplazado.dispose();
                     crearVistaInsertarPersona();
-                    break;
+                }
             }
         }
     }

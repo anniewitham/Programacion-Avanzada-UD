@@ -1,19 +1,31 @@
 package edu.avanzada.taller1.vista;
 
+import edu.avanzada.taller1.control.ControlCambiarSituacion;
 import edu.avanzada.taller1.control.ControlInsertarPersona;
 
 public class VistaInsertarReservista extends javax.swing.JFrame {
- private ControlInsertarPersona control;
-    /**
-     * Creates new form InsertarRecluta
-     */
+    private ControlInsertarPersona controlInsertar;
+    private ControlCambiarSituacion controlCambiar;
+ 
     public VistaInsertarReservista(ControlInsertarPersona aThis) {
         initComponents();
-        control = aThis;
+        controlInsertar = aThis;
         setVisible(true);
         setResizable(false);
         setLocationRelativeTo(null);
         setTitle("Insertar un Reservista");
+    }
+    
+    public VistaInsertarReservista(ControlCambiarSituacion aThis) {
+        initComponents();
+        controlCambiar = aThis;
+        setVisible(true);
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setTitle("Insertar un Reclutado");
+        NombreReservista.setEditable(false);
+        ApellidoReservista.setEditable(false);
+        CedulaReservista.setEditable(false);
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
