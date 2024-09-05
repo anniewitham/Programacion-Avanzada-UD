@@ -1,6 +1,7 @@
 package edu.avanzada.taller1.control;
 
 import edu.avanzada.taller1.modelo.Aplazado;
+import edu.avanzada.taller1.modelo.Persona;
 import edu.avanzada.taller1.modelo.Reclutado;
 import edu.avanzada.taller1.modelo.Remiso;
 import edu.avanzada.taller1.modelo.Reservista;
@@ -11,6 +12,7 @@ import edu.avanzada.taller1.vista.VistaInsertarReservista;
 import edu.avanzada.taller1.vista.VistaMenuInsertarPersona;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class ControlInsertarPersona implements ActionListener{
 
@@ -69,6 +71,15 @@ public class ControlInsertarPersona implements ActionListener{
         c = 5;
     }
     
+    private boolean validarRegistro(String cedula) {
+        for (Persona persona : controlPrincipal.personas) {
+            if (persona.getCedula().equals(cedula)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if ("Salir".equals(e.getActionCommand())) {
@@ -79,6 +90,11 @@ public class ControlInsertarPersona implements ActionListener{
             crearVistaInsertarRecluta();
         }
         if ("Insertar Recluta".equals(e.getActionCommand())) {
+            String cedulaRecluta = vistaInsertarRecluta.CedulaRecluta.getText();
+            if (validarRegistro(cedulaRecluta)) {
+                JOptionPane.showMessageDialog(null, "La persona con cédula " + cedulaRecluta + " ya está registrada.");
+                return;
+            }
             Reclutado recluta = new Reclutado(
                     vistaInsertarRecluta.NombreRecluta.getText(),
                     vistaInsertarRecluta.ApellidoRecluta.getText(),
@@ -94,6 +110,11 @@ public class ControlInsertarPersona implements ActionListener{
             crearVistaInsertarReservista();
         }
         if ("Insertar Reservista".equals(e.getActionCommand())){
+            String cedulaRecluta = vistaInsertarRecluta.CedulaRecluta.getText();
+            if (validarRegistro(cedulaRecluta)) {
+                JOptionPane.showMessageDialog(null, "La persona con cédula " + cedulaRecluta + " ya está registrada.");
+                return;
+            }
             Reservista reservista = new Reservista(
                     vistaInsertarReservista.NombreReservista.getText(),
                     vistaInsertarReservista.ApellidoReservista.getText(),
@@ -109,6 +130,11 @@ public class ControlInsertarPersona implements ActionListener{
             crearVistaInsertarRemiso();
         }
         if ("Insertar Remiso".equals(e.getActionCommand())){
+            String cedulaRecluta = vistaInsertarRecluta.CedulaRecluta.getText();
+            if (validarRegistro(cedulaRecluta)) {
+                JOptionPane.showMessageDialog(null, "La persona con cédula " + cedulaRecluta + " ya está registrada.");
+                return;
+            }
             Remiso remiso = new Remiso(
                     vistaInsertarRemiso.NombreRemiso.getText(),
                     vistaInsertarRemiso.ApellidoRemiso.getText(),
@@ -123,6 +149,11 @@ public class ControlInsertarPersona implements ActionListener{
             crearVistaInsertarAplazado();
         }
         if ("Insertar Aplazado".equals(e.getActionCommand())){
+            String cedulaRecluta = vistaInsertarRecluta.CedulaRecluta.getText();
+            if (validarRegistro(cedulaRecluta)) {
+                JOptionPane.showMessageDialog(null, "La persona con cédula " + cedulaRecluta + " ya está registrada.");
+                return;
+            }
             Aplazado aplazado = new Aplazado(
                     vistaInsertarAplazado.NombreAplazado.getText(),
                     vistaInsertarAplazado.ApellidoAplazado.getText(),
