@@ -178,5 +178,7 @@ public class ControlInsertarPersonaTest {
         // No hay una forma directa de verificar que la aplicación ha cerrado, pero podrías verificar que la vista ha sido ocultada
         assertFalse(controlInsertarPersona.vistaInsertarRecluta.isVisible(), "La vista debería estar oculta después de 'Salir'");
     }
+    
+    
 }
 

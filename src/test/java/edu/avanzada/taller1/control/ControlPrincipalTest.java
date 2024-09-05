@@ -96,7 +96,7 @@ public class ControlPrincipalTest {
 
     @Test
     public void testActionPerformed_Salir() {
-      
+      //No se puede probar System.exit(0) directamente.
     }
 }
 
